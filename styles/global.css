@@ -336,7 +336,7 @@ Mobile menu */
 .close-icon {
   font-size: 32px;
   cursor: pointer;
-  color: #ffe1bc; /* Customize the color as needed */
+  color: #000000; /* Customize the color as needed */
 }
 .mobile-navbar {
   display: none; /* Hide the mobile navbar */
@@ -352,7 +352,7 @@ Mobile menu */
 .navbar-mobile-items {
   box-sizing: border-box;
   font-size: 20px;
-  color: white;
+  color: rgb(0, 0, 0);
   font-weight: bold;
   text-align: left;
   text-transform: uppercase;
@@ -464,32 +464,27 @@ Section 1 Responsive.
 
   .mobile-menu {
     position: fixed;
-    top: 57px; /* Adjust this value to leave space for the navigation bar */
+    top: 66px; /* Adjust this value to leave space for the navigation bar */
     width: 100%;
-    height: calc(
-      100% - 60px
-    ); /* Adjust this value to account for the navigation bar height */
-    background-color: #222222; /* Customize the background color */
+    background-color: #ffffff; /* Customize the background color */
     z-index: 9999;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: left;
     overflow: hidden; /* Add scrollbars if necessary */
-
-    padding-top: 40px;
+    color: #000;
   }
 
   /* Apply flex properties to the ul containing menu items */
   .mobile-menu ul {
-    width: 100%; /* Ensure the menu spans the full width */
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Center menu items horizontally */
-    align-items: left; /* Center menu items vertically */
+    justify-content: flex-start; /* Align menu items to the top */
+    align-items: center; /* Align items to the left */
     list-style-type: none;
-    padding: 0;
-    list-style-type: none;
+    padding-top: 40px;
     text-align: left;
   }
   .mobile-menu-icon {
@@ -520,7 +515,7 @@ Section 1 Responsive.
     margin-bottom: 25px;
   }
   .mobile-menu a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     font-size: 20px;
   }
