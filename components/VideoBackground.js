@@ -3,8 +3,8 @@ import React from "react";
 const VideoBackground = () => {
   return (
     <div className="video-background">
-      <video autoPlay="autoplay" loop="loop" muted>
-        <source src="/videos/HomeVideo.mp4" type="video/mp4" />
+      <video autoPlay playsInline muted loop preload="auto">
+        <source src="/videos/HomeVideo.webm" type="video/webm" />
         Your browser does not support the video tag.
       </video>
       {/* You can add content here that will be displayed on top of the video */}
