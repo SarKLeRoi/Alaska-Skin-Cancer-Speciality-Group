@@ -84,7 +84,7 @@ a {
 
 /* Change link color on hover */
 a:hover {
-  color: #ffe1bc;
+  color: #666666;
   cursor: pointer;
 }
 
@@ -92,8 +92,7 @@ a:hover {
 .dropdown {
   position: relative;
   display: inline-block;
-  color: #fff;
-  display: inline-block; /* Make the links inline-block elements */
+  color: black;
   text-align: center; /* Center-align the text horizontally */
 }
 .dropdown::after {
@@ -109,33 +108,39 @@ a:hover {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #333;
-  min-width: 200px;
+  color: black;
+  background-color: white;
+  width: 200px; /* Fixed width to prevent expansion */
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  top: 20px;
   top: 182%; /* Position dropdown below parent */
   left: 50%; /* Center dropdown relative to parent */
   transform: translateX(-50%); /* Adjust centering */
   text-align: center;
   transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transitions */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
 /* Style the dropdown links */
 .dropdown-content a {
   padding: 10px 16px;
   display: block;
-  color: #fff;
-  text-align: left;
+  color: black;
+  text-align: center;
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Show ellipsis for long text */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+  width: 100%; /* Take full width of parent */
 }
 
 /* Change dropdown link color on hover */
 .dropdown-content a:hover {
-  background-color: #ffe1bc;
-  color: black;
-  cursor: pointer; /* Add a pointer cursor */
+  background-color: #333333;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 /* Show dropdown content on hover */
@@ -157,7 +162,7 @@ li:hover > .dropdown-content {
 }
 li.dropdown:hover > span,
 li:hover > span {
-  color: #ffe1bc;
+  color: #666666;
   cursor: pointer;
 }
 .sticky-scroll {
@@ -520,7 +525,7 @@ Section 1 Responsive.
     font-size: 20px;
   }
   .mobile-menu a:hover {
-    color: #ffe1bc; /* Change the color to your desired hover color */
+    color: #666666; /* Change the color to your desired hover color */
   }
   body.menu-open {
     overflow: hidden;
@@ -2660,7 +2665,7 @@ textarea::placeholder {
   }
 
   .provider-image-container {
-    height: 220px;
+    height: 250px;
   }
   .footer-column h3 {
     font-size: 16px;

@@ -145,13 +145,18 @@ function Navbar() {
             Home
           </Link>
         </li>
-        <li>
+        <li className="dropdown">
           <Link className="main-title" href="/about">
             About
           </Link>
+          <div className="dropdown-content">
+            <Link href="/about/group">About The Group</Link>
+            <Link href="/about/clinic">About The Clinic</Link>
+            <Link href="/about/providers">About The Providers</Link>
+          </div>
         </li>
         <li className="dropdown">
-          <Link className="main-title" href="/face">
+          <Link className="main-title" href="/skinCancer">
             Skin Cancer
           </Link>
           {/* <div className="dropdown-content">
@@ -159,7 +164,7 @@ function Navbar() {
             </div> */}
         </li>
         <li className="dropdown">
-          <Link className="main-title" href="/breast">
+          <Link className="main-title" href="/treatmentOptions">
             Treatment Options
           </Link>
           <div className="dropdown-content">
@@ -167,7 +172,7 @@ function Navbar() {
           </div>
         </li>
         <li className="dropdown">
-          <Link className="main-title" href="/body">
+          <Link className="main-title" href="/gallery">
             Gallery
           </Link>
           <div className="dropdown-content">

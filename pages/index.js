@@ -1,36 +1,17 @@
 import React from "react";
 import Head from "next/head";
+import Script from "next/script";
 import Navbar from "../components/Navbar";
 import TitleRow from "../components/TitleRow";
 import VideoBackground from "../components/VideoBackground";
 import TextCentered from "../components/TextCentered";
 import LogoTab from "../components/Logo-Tab";
+import Logos from "../components/Logos";
+import Providers from "../components/Providers";
 import EndingSection from "../components/EndingSection";
 function HomePage() {
   const baseUrl = "https://www.nassarplasticsurgery.com";
-  const logos = [
-    "/images/society-logos/AAD.webp",
-    "/images/society-logos/ABPS.webp",
-    "/images/society-logos/ABSlogoLH.webp",
-    "/images/society-logos/ASMS.webp",
-    "/images/society-logos/ASPS.webp",
-    "/images/society-logos/DART.webp",
-    "/images/society-logos/FSDS.webp",
-  ];
-  const providers = [
-    {
-      name: "Dr. Dorizas",
-      image: "/images/doctors/AndrewDorizas_headshot.webp",
-    },
-    {
-      name: "Dr. Nassar",
-      image: "/images/doctors/AmerNassar_headshot.webp",
-    },
-    {
-      name: "Dr. Galler",
-      image: "/images/doctors/BlakeGaller_headshot.webp",
-    },
-  ];
+
   const mySVG = (
     <img
       src="/images/Triangle-Logo.png"
@@ -43,31 +24,134 @@ function HomePage() {
     <>
       {/* <Preloader /> */}
       <Head>
-        <title>Alaska Skin Cancer</title>
+        <title>
+          Alaska Skin Cancer Specialty Group - Expert Skin Cancer Treatment
+        </title>
         <meta
           name="description"
-          content="Discover refined elegance and self-assurance with Dr. Amer Nassar, a Harvard-trained Plastic Surgeon renowned for personalized care and an artistic approach. Experience top-tier surgical expertise that enhances your natural beauty and delivers exceptional results."
+          content="Alaska Skin Cancer Specialty Group provides comprehensive skin cancer treatment including Mohs surgery, radiation therapy, and plastic reconstruction. Expert care in Palmer, Wasilla, and Anchorage."
         />
-        <meta property="og:title" content="Alaska Skin Cancer" />
+        <meta
+          property="og:title"
+          content="Alaska Skin Cancer Specialty Group - Expert Skin Cancer Treatment"
+        />
         <meta
           property="og:description"
-          content="Discover refined elegance and self-assurance with Dr. Amer Nassar, a Harvard-trained Plastic Surgeon renowned for personalized care and an artistic approach. Experience top-tier surgical expertise that enhances your natural beauty and delivers exceptional results."
+          content="Alaska Skin Cancer Specialty Group provides comprehensive skin cancer treatment including Mohs surgery, radiation therapy, and plastic reconstruction. Expert care in Palmer, Wasilla, and Anchorage."
         />
-        <meta
-          property="og:image"
-          content="/images/About_Amer_Transparent.webp"
-        />
-        <meta
-          property="og:url"
-          content="https://www.nassarplasticsurgery.com"
-        />
+        <meta property="og:image" content="/images/logo.png" />
+        <meta property="og:url" content="https://www.alaskaskincancer.com" />
         <meta
           name="keywords"
-          content="Plastic Surgery, Cosmetic Procedures, Dr. Amer Nassar, Dr. Nassar, Alaska, Wasilla, Palmer, Kenai, Anchorage, plastic surgeon in Alaska, surgeon in Alaska, plastic surgeon in Anchorage, plastic surgeon in Kenai, plastic surgeon in Palmer, plastic surgeon in Wasilla"
+          content="skin cancer treatment, Mohs surgery, basal cell carcinoma, squamous cell carcinoma, melanoma, Alaska, Palmer, Wasilla, Anchorage, dermatology, skin cancer specialist, skin cancer doctor, skin cancer surgery"
         />
-        <meta name="author" content="Dr. Amer Nassar"></meta>
+        <meta name="author" content="Alaska Skin Cancer Specialty Group"></meta>
         <link rel="icon" href="/images/favicon.png" />
         <link rel="canonical" href={baseUrl} />
+
+        {/* Structured Data - Medical Organization */}
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "MedicalOrganization",
+              name: "Alaska Skin Cancer Specialty Group",
+              url: "https://www.alaskaskincancer.com",
+              image: "https://www.alaskaskincancer.com/images/logo.png",
+              logo: "https://www.alaskaskincancer.com/images/logo.png",
+              description:
+                "Comprehensive skin cancer treatment including Mohs surgery, radiation therapy, and plastic reconstruction. Expert care in Palmer, Wasilla, and Anchorage.",
+              address: {
+                "@type": "PostalAddress",
+                addressCountry: "US",
+                addressRegion: "Alaska",
+              },
+              areaServed: [
+                {
+                  "@type": "Place",
+                  name: "Palmer, Alaska",
+                },
+                {
+                  "@type": "Place",
+                  name: "Wasilla, Alaska",
+                },
+                {
+                  "@type": "Place",
+                  name: "Anchorage, Alaska",
+                },
+              ],
+              medicalSpecialty: "Dermatology",
+              availableService: [
+                {
+                  "@type": "MedicalProcedure",
+                  name: "Mohs Surgery",
+                },
+                {
+                  "@type": "MedicalProcedure",
+                  name: "Skin Cancer Treatment",
+                },
+                {
+                  "@type": "MedicalProcedure",
+                  name: "Radiation Therapy",
+                },
+                {
+                  "@type": "MedicalProcedure",
+                  name: "Plastic Reconstruction",
+                },
+              ],
+            }),
+          }}
+        />
+
+        {/* Structured Data - Breadcrumb */}
+        <Script
+          id="breadcrumb-schema"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://www.alaskaskincancer.com/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "About",
+                  item: "https://www.alaskaskincancer.com/about/group",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "Services",
+                  item: "https://www.alaskaskincancer.com/#services",
+                },
+              ],
+            }),
+          }}
+        />
+
+        {/* Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=G-QDN4FFSPG8`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-QDN4FFSPG8');
+          `}
+        </Script>
       </Head>
       <div>
         <TitleRow />
@@ -113,36 +197,9 @@ function HomePage() {
           newPadding={"20px"}
           description={`Skin cancer treatment requires a comprehensive approach to diagnose, treat and reconstruct the various types of cancers. The Alaska Skin Cancer Speciality Group is a multi-speciality group of physicians and surgeons who specialize in all aspects of skin cancer treatment, including biopsies and diagnostics, surgical treatment, Moh’s Micrographic Surgery, Radiation therapy, and definitive reconstruction by a Plastic Surgeon. We pride ourselves in being the only group in Alaska to offer such an extensive and thorough approach to skin cancer management for all of our patients.`}
         />
-        <div className="logos-container">
-          {logos.map((logo, index) => (
-            <div key={index} className="logo-item">
-              <img src={logo} alt={`Logo ${index + 1}`} />
-            </div>
-          ))}
-        </div>
+        <Logos />
       </div>
-      <h2 className="homepage-h2">
-        Our doctors are members of the following institutions and organizations
-      </h2>
-      <section className="providers-section">
-        <h2 className="providers-title">Meet Our Providers</h2>
-        <div className="providers-grid">
-          {providers.map((provider, index) => (
-            <div key={index} className="provider-card">
-              <div className="provider-image-container">
-                <img
-                  src={provider.image}
-                  alt={provider.name}
-                  className="provider-image"
-                />
-              </div>
-              <button className="provider-button">
-                Learn more about<br></br> {provider.name}
-              </button>
-            </div>
-          ))}
-        </div>
-      </section>
+      <Providers />
       <LogoTab />
       <section className="section4">
         <h1>About Skin Cancer</h1>
