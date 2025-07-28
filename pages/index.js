@@ -9,26 +9,26 @@ import EndingSection from "../components/EndingSection";
 function HomePage() {
   const baseUrl = "https://www.nassarplasticsurgery.com";
   const logos = [
-    "/images/society-logos/AAD.png",
-    "/images/society-logos/ABPS.png",
-    "/images/society-logos/ABSlogoLH.png",
-    "/images/society-logos/ASMS.png",
-    "/images/society-logos/ASPS.png",
-    "/images/society-logos/DART.png",
-    "/images/society-logos/FSDS.png",
+    "/images/society-logos/AAD.webp",
+    "/images/society-logos/ABPS.webp",
+    "/images/society-logos/ABSlogoLH.webp",
+    "/images/society-logos/ASMS.webp",
+    "/images/society-logos/ASPS.webp",
+    "/images/society-logos/DART.webp",
+    "/images/society-logos/FSDS.webp",
   ];
   const providers = [
     {
       name: "Dr. Dorizas",
-      image: "/images/doctors/AndrewDorizas_headshot.jpg",
+      image: "/images/doctors/AndrewDorizas_headshot.webp",
     },
     {
       name: "Dr. Nassar",
-      image: "/images/doctors/AmerNassar_headshot.jpg",
+      image: "/images/doctors/AmerNassar_headshot.webp",
     },
     {
       name: "Dr. Galler",
-      image: "/images/doctors/BlakeGaller_headshot.jpg",
+      image: "/images/doctors/BlakeGaller_headshot.webp",
     },
   ];
   const mySVG = (
@@ -149,7 +149,7 @@ function HomePage() {
         <div className="body-parts-image-container">
           <a href="/basalCellCarcinoma" className="image-link">
             <img
-              src="images/skin-cancer/BasalCell.jpeg"
+              src="images/skin-cancer/BasalCell.webp"
               loading="lazy"
               alt="Face plastic surgeries"
             />
@@ -157,7 +157,7 @@ function HomePage() {
           </a>
           <a href="/squamousCellCarcinoma" className="image-link">
             <img
-              src="images/skin-cancer/SquamousCell.jpeg"
+              src="images/skin-cancer/SquamousCell.webp"
               loading="lazy"
               alt="Squamous Cell Carcinoma"
             />
@@ -165,7 +165,7 @@ function HomePage() {
           </a>
           <a href="/melanoma" className="image-link">
             <img
-              src="images/skin-cancer/Melanoma.jpeg"
+              src="images/skin-cancer/Melanoma.webp"
               loading="lazy"
               alt="Melanoma"
             />
