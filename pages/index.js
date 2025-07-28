@@ -48,111 +48,112 @@ function HomePage() {
         <meta name="author" content="Alaska Skin Cancer Specialty Group"></meta>
         <link rel="icon" href="/images/favicon.png" />
         <link rel="canonical" href={baseUrl} />
-
-        {/* Structured Data - Medical Organization */}
-        <Script
-          id="organization-schema"
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "MedicalOrganization",
-              name: "Alaska Skin Cancer Specialty Group",
-              url: "https://www.alaskaskincancer.com",
-              image: "https://www.alaskaskincancer.com/images/logo.png",
-              logo: "https://www.alaskaskincancer.com/images/logo.png",
-              description:
-                "Comprehensive skin cancer treatment including Mohs surgery, radiation therapy, and plastic reconstruction. Expert care in Palmer, Wasilla, and Anchorage.",
-              address: {
-                "@type": "PostalAddress",
-                addressCountry: "US",
-                addressRegion: "Alaska",
-              },
-              areaServed: [
-                {
-                  "@type": "Place",
-                  name: "Palmer, Alaska",
-                },
-                {
-                  "@type": "Place",
-                  name: "Wasilla, Alaska",
-                },
-                {
-                  "@type": "Place",
-                  name: "Anchorage, Alaska",
-                },
-              ],
-              medicalSpecialty: "Dermatology",
-              availableService: [
-                {
-                  "@type": "MedicalProcedure",
-                  name: "Mohs Surgery",
-                },
-                {
-                  "@type": "MedicalProcedure",
-                  name: "Skin Cancer Treatment",
-                },
-                {
-                  "@type": "MedicalProcedure",
-                  name: "Radiation Therapy",
-                },
-                {
-                  "@type": "MedicalProcedure",
-                  name: "Plastic Reconstruction",
-                },
-              ],
-            }),
-          }}
-        />
-
-        {/* Structured Data - Breadcrumb */}
-        <Script
-          id="breadcrumb-schema"
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                {
-                  "@type": "ListItem",
-                  position: 1,
-                  name: "Home",
-                  item: "https://www.alaskaskincancer.com/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 2,
-                  name: "About",
-                  item: "https://www.alaskaskincancer.com/about/group",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 3,
-                  name: "Services",
-                  item: "https://www.alaskaskincancer.com/#services",
-                },
-              ],
-            }),
-          }}
-        />
-
-        {/* Google Analytics */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=G-QDN4FFSPG8`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-QDN4FFSPG8');
-          `}
-        </Script>
       </Head>
+
+      {/* Structured Data - Medical Organization */}
+      <Script
+        id="organization-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalOrganization",
+            name: "Alaska Skin Cancer Specialty Group",
+            url: "https://www.alaskaskincancer.com",
+            image: "https://www.alaskaskincancer.com/images/logo.png",
+            logo: "https://www.alaskaskincancer.com/images/logo.png",
+            description:
+              "Comprehensive skin cancer treatment including Mohs surgery, radiation therapy, and plastic reconstruction. Expert care in Palmer, Wasilla, and Anchorage.",
+            address: {
+              "@type": "PostalAddress",
+              addressCountry: "US",
+              addressRegion: "Alaska",
+            },
+            areaServed: [
+              {
+                "@type": "Place",
+                name: "Palmer, Alaska",
+              },
+              {
+                "@type": "Place",
+                name: "Wasilla, Alaska",
+              },
+              {
+                "@type": "Place",
+                name: "Anchorage, Alaska",
+              },
+            ],
+            medicalSpecialty: "Dermatology",
+            availableService: [
+              {
+                "@type": "MedicalProcedure",
+                name: "Mohs Surgery",
+              },
+              {
+                "@type": "MedicalProcedure",
+                name: "Skin Cancer Treatment",
+              },
+              {
+                "@type": "MedicalProcedure",
+                name: "Radiation Therapy",
+              },
+              {
+                "@type": "MedicalProcedure",
+                name: "Plastic Reconstruction",
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* Structured Data - Breadcrumb */}
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.alaskaskincancer.com/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "About",
+                item: "https://www.alaskaskincancer.com/about/group",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: "Services",
+                item: "https://www.alaskaskincancer.com/#services",
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* Google Analytics */}
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=G-QDN4FFSPG8`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-QDN4FFSPG8');
+        `}
+      </Script>
+
       <div>
         <TitleRow />
         <Navbar />
