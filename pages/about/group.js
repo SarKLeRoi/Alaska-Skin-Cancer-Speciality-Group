@@ -140,6 +140,15 @@ function group() {
         <TitleRow />
         <Navbar />
         <section className="section1"></section>
+
+        {/* First Photo - Full Width */}
+        <div className="full-width-photo first-photo">
+          <img
+            src="/images/AboutTheGroup1.webp"
+            alt="Alaska Skin Cancer Specialty Group"
+          />
+        </div>
+
         <LogoTab />
         <TextCentered
           newPadding={"20px"}
@@ -148,6 +157,14 @@ function group() {
 
 The Group’s mission is to provide compassionate, patient-centered care, ensuring each individual understands their options and feels supported every step of the way. Whether you require a skin cancer screening, a specialized surgical procedure, or a comprehensive reconstruction plan, the Alaska Skin Cancer Specialty Group is committed to helping you achieve optimal outcomes. Their collaborative approach ensures that every patient receives timely, targeted, and effective treatment.`}
         />
+        <LogoTab />
+        {/* Second Photo - Full Width */}
+        <div className="full-width-photo">
+          <img
+            src="/images/AboutTheGroup2.webp"
+            alt="Alaska Skin Cancer Specialty Group"
+          />
+        </div>
         <LogoTab />
         <Logos />
       </div>

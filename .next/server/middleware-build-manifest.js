@@ -1,1 +1,40 @@
-self.__BUILD_MANIFEST={polyfillFiles:["static/chunks/polyfills-42372ed130431b0a.js"],devFiles:[],ampDevFiles:[],lowPriorityFiles:[],rootMainFiles:[],rootMainFilesTree:{},pages:{"/":["static/chunks/webpack-8cac0b4b405cede1.js","static/chunks/framework-a4ddb9b21624b39b.js","static/chunks/main-1b82f937bff51896.js","static/chunks/179-e2f4e78bec612f40.js","static/chunks/116-57526a8ed5570daa.js","static/chunks/pages/index-0102047a2b6ed208.js"],"/_app":["static/chunks/webpack-8cac0b4b405cede1.js","static/chunks/framework-a4ddb9b21624b39b.js","static/chunks/main-1b82f937bff51896.js","static/css/a0c56c05fdaf9670.css","static/chunks/pages/_app-09cded1967290ba9.js"],"/_error":["static/chunks/webpack-8cac0b4b405cede1.js","static/chunks/framework-a4ddb9b21624b39b.js","static/chunks/main-1b82f937bff51896.js","static/chunks/pages/_error-fde50cb7f1ab27e0.js"],"/about/group":["static/chunks/webpack-8cac0b4b405cede1.js","static/chunks/framework-a4ddb9b21624b39b.js","static/chunks/main-1b82f937bff51896.js","static/chunks/179-e2f4e78bec612f40.js","static/chunks/116-57526a8ed5570daa.js","static/chunks/pages/about/group-4e06ab49bd6c4e1a.js"]},ampFirstPages:[]},self.__BUILD_MANIFEST.lowPriorityFiles=["/static/"+process.env.__NEXT_BUILD_ID+"/_buildManifest.js",,"/static/"+process.env.__NEXT_BUILD_ID+"/_ssgManifest.js"];
+self.__BUILD_MANIFEST = {
+  "polyfillFiles": [
+    "static/chunks/polyfills.js"
+  ],
+  "devFiles": [
+    "static/chunks/react-refresh.js"
+  ],
+  "ampDevFiles": [],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [],
+  "rootMainFilesTree": {},
+  "pages": {
+    "/": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/index.js"
+    ],
+    "/_app": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/_app.js"
+    ],
+    "/_error": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/_error.js"
+    ],
+    "/about/DrGaller": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/about/DrGaller.js"
+    ]
+  },
+  "ampFirstPages": []
+};
+self.__BUILD_MANIFEST.lowPriorityFiles = [
+"/static/" + process.env.__NEXT_BUILD_ID + "/_buildManifest.js",
+,"/static/" + process.env.__NEXT_BUILD_ID + "/_ssgManifest.js",
+
+];

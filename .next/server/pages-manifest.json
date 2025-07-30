@@ -1,1 +1,8 @@
-{"/about/group":"pages/about/group.html","/":"pages/index.html","/_error":"pages/_error.js","/_app":"pages/_app.js","/_document":"pages/_document.js","/404":"pages/404.html"}
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/about/group": "pages/about/group.js",
+  "/": "pages/index.js",
+  "/about/DrGaller": "pages/about/DrGaller.js"
+}

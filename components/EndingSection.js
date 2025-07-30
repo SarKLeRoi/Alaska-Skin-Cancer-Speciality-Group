@@ -27,8 +27,8 @@ export default function Footer() {
           <br />
 
           <p>
-            1100 E DIMOND BLVD #310,
-            <br /> ANCHORAGE, AK 99515
+            1100 E Diamond Blvd #310,
+            <br /> Anchorage, AK 99515
           </p>
           <br></br>
           <h4>Matsu Plastic Surgery</h4>
