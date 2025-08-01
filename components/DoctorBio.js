@@ -14,7 +14,14 @@ const DoctorBio = ({ doctor }) => {
           alt="Alaska Skin Cancer Specialty Group"
         />
       </div>
-      <LogoTab />
+      <div className="doctor-bio-header">
+        <img
+          src="/images/Triangle-Logo.png" /* Ensure the correct path */
+          alt="Triangle Logo"
+          className="homepage-triangle-svg"
+        />
+        <h2>{doctor.name}</h2>
+      </div>
       <div className="doctor-bio-container">
         <div className="doctor-bio-content">
           <div className="doctor-image-section">
@@ -27,80 +34,36 @@ const DoctorBio = ({ doctor }) => {
             )}
           </div>
           <div className="doctor-bio-text">
-            <h1 className="doctor-name">{doctor.name}</h1>
-            <p className="doctor-intro">{doctor.title}</p>
-
-            <div className="doctor-section">
-              <p>{doctor.description}</p>
-            </div>
-
-            <div className="doctor-section">
-              <h2>Educational Background and Training</h2>
-              <p>
-                <strong>Osteopathic Degree:</strong> {doctor.education.degree}
-              </p>
-              <p>
-                <strong>Residency:</strong> {doctor.education.residency}
-              </p>
-            </div>
-
-            <div className="doctor-section">
-              <h2>Professional Experience</h2>
-              {doctor.experience.map((exp, idx) => (
-                <div className="doctor-exp" key={idx}>
-                  <h3>{exp.title}</h3>
-                  <p>{exp.description}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="doctor-section">
-              <h2>Expertise in Laser and Radiation Therapies</h2>
-
-              <h3>Laser Treatments</h3>
-              <p>
-                Dr. Galler utilizes advanced laser technologies to address a
-                variety of dermatological conditions, including cosmetic
-                procedures.
-              </p>
-              <ul>
-                {doctor.laserTherapies.map((item, idx) => (
-                  <li key={idx}>{item}</li>
+            {doctor.sections.map((section, idx) => (
+              <div className="doctor-section" key={idx}>
+                <h2>{section.title}</h2>
+                {section.content.map((item, itemIdx) => (
+                  <div key={itemIdx}>
+                    {item.type === "paragraph" && (
+                      <p
+                        className={item.className || ""}
+                        dangerouslySetInnerHTML={{ __html: item.text }}
+                      ></p>
+                    )}
+                    {item.type === "list" && (
+                      <ul>
+                        {item.items.map((listItem, listIdx) => (
+                          <li
+                            key={listIdx}
+                            dangerouslySetInnerHTML={{ __html: listItem }}
+                          ></li>
+                        ))}
+                      </ul>
+                    )}
+                    {item.type === "highlight" && (
+                      <div className="doctor-highlight">
+                        <p dangerouslySetInnerHTML={{ __html: item.text }}></p>
+                      </div>
+                    )}
+                  </div>
                 ))}
-              </ul>
-
-              <h3>Radiation Therapy</h3>
-              <p>{doctor.radiationTherapy}</p>
-            </div>
-
-            <div className="doctor-section">
-              <h2>Licensure and Certifications</h2>
-              <p>
-                <strong>State Licenses:</strong> {doctor.licenses}
-              </p>
-              <p>
-                <strong>Professional Memberships:</strong>{" "}
-                {doctor.certifications}
-              </p>
-            </div>
-
-            <div className="doctor-section">
-              <h2>Research and Publications</h2>
-              <p>{doctor.research}</p>
-            </div>
-
-            <div className="doctor-section">
-              <h2>{doctor.approach}</h2>
-              <div className="doctor-highlight">
-                <p>
-                  Dr. Galler is committed to providing personalized,
-                  comprehensive care that addresses each patient's unique needs
-                  and concerns. His extensive experience in both traditional and
-                  innovative treatments ensures that patients receive the most
-                  effective and appropriate care for their specific conditions.
-                </p>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

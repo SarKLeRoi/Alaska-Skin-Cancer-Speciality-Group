@@ -12,6 +12,7 @@ html {
   padding: 0;
   height: 100%;
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -2454,9 +2455,26 @@ textarea::placeholder {
 /* Doctor Biography Layout */
 .doctor-bio-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 95%;
   margin: 0 auto;
   padding: 40px 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow-x: hidden;
+}
+
+/* Left-aligned title at the top */
+.doctor-bio-container .doctor-name {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 40px;
+  font-family: "Roboto", sans-serif;
+  text-align: left;
+  width: 100%;
 }
 
 .doctor-bio-content {
@@ -2472,20 +2490,12 @@ textarea::placeholder {
 .doctor-headshot {
   width: 100%;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: block;
 }
 
 .doctor-bio-text {
   flex: 1;
-}
-
-.doctor-name {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 20px;
-  font-family: "Roboto", sans-serif;
+  max-width: 1280px;
 }
 
 .doctor-intro {
@@ -2494,6 +2504,7 @@ textarea::placeholder {
   color: #555;
   margin-bottom: 30px;
   font-family: "Roboto", sans-serif;
+  text-align: left;
 }
 
 .bio-section {
@@ -2566,6 +2577,21 @@ textarea::placeholder {
 }
 
 @media (max-width: 768px) {
+  .doctor-bio-container {
+    max-width: 100%;
+    padding: 1rem;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .doctor-bio-container .doctor-name {
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
   .doctor-bio-content {
     flex-direction: column;
     gap: 30px;
@@ -2577,19 +2603,25 @@ textarea::placeholder {
     margin: 0 auto;
   }
 
-  .doctor-name {
-    font-size: 2rem;
-    text-align: center;
+  .doctor-bio-text {
+    max-width: 100%;
+    width: 100%;
   }
 
   .doctor-intro {
-    text-align: center;
+    text-align: left;
   }
 }
 
 @media (max-width: 480px) {
   .doctor-bio-container {
     padding: 20px 15px;
+  }
+
+  .doctor-bio-container .doctor-name {
+    font-size: 1.8rem;
+    text-align: left;
+    margin-bottom: 25px;
   }
 
   .doctor-bio-content {
@@ -2600,8 +2632,8 @@ textarea::placeholder {
     max-width: 200px;
   }
 
-  .doctor-name {
-    font-size: 1.8rem;
+  .doctor-intro {
+    text-align: left;
   }
 
   .full-width-photo img {
@@ -2853,10 +2885,32 @@ textarea::placeholder {
     align-items: center;
   }
 }
-/* DoctorBio.css */
+/* DoctorBio.css - Override for left alignment */
+.doctor-bio-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-weight: 100 !important;
+  font-family: "Roboto", sans-serif;
+  padding: 2rem 0;
+  gap: 20px;
+}
+.doctor-bio-header h2 {
+  font-size: 2.5rem;
+  font-weight: 100;
+  color: #696969;
+  letter-spacing: 2px;
+}
 .doctor-bio-container {
-  max-width: 900px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 95%;
+  margin: 0;
+  margin-left: 2rem;
   padding: 2rem;
   background-color: #fff;
 }
@@ -2900,23 +2954,39 @@ textarea::placeholder {
 
 .doctor-section h2 {
   font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
   color: #111827;
+  letter-spacing: 1px;
 }
 
 .doctor-section h3 {
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 300;
   margin-top: 1rem;
   color: #1f2937;
 }
 
 .doctor-section p,
 .doctor-section li {
-  font-size: 1rem;
+  font-size: 18px;
   line-height: 1.6;
   color: #374151;
+  padding-bottom: 10px;
+}
+
+/* empty bullet points */
+.doctor-section p:not(:has(strong:first-child)) {
+  padding-left: 2rem;
+}
+
+/* No bullet points */
+.doctor-section p:has(strong:first-child) {
+  padding-left: 0rem;
+}
+/* Bullet points */
+.doctor-section p.bullet-circle {
+  padding-left: 1rem !important;
 }
 
 .doctor-exp {
@@ -2931,9 +3001,13 @@ textarea::placeholder {
   border-radius: 0.5rem;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 970px) {
   .doctor-bio-container {
-    padding: 1rem;
+    padding: 1.2rem;
+    max-width: 100%;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .doctor-header h1 {
@@ -2941,7 +3015,7 @@ textarea::placeholder {
   }
 
   .doctor-header p {
-    font-size: 1rem;
+    font-size: 16rem;
   }
 
   .doctor-section h2 {
@@ -2954,6 +3028,13 @@ textarea::placeholder {
 
   .doctor-section p,
   .doctor-section li {
-    font-size: 0.95rem;
+    font-size: 1rem;
+  }
+  .doctor-bio-header h2 {
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: #696969;
+    letter-spacing: 2px;
+    text-align: center;
   }
 }

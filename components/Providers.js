@@ -1,26 +1,33 @@
 import React from "react";
+import { useRouter } from "next/router";
 
 const Providers = () => {
+  const router = useRouter();
+
   const providers = [
     {
       name: "Dr. Dorizas",
       image: "/images/doctors/AndrewDorizas_headshot.webp",
+      path: "/about/providers/DrDorizas",
     },
     {
       name: "Dr. Nassar",
       image: "/images/doctors/AmerNassar_headshot.webp",
+      path: "/about/providers/DrNassar",
     },
     {
       name: "Dr. Galler",
       image: "/images/doctors/BlakeGaller_headshot.webp",
+      path: "/about/providers/DrGaller",
     },
   ];
 
+  const handleProviderClick = (path) => {
+    router.push(path);
+  };
+
   return (
     <>
-      <h2 className="homepage-h2">
-        Our doctors are members of the following institutions and organizations
-      </h2>
       <section className="providers-section">
         <h2 className="providers-title">Meet Our Providers</h2>
         <div className="providers-grid">
@@ -33,7 +40,10 @@ const Providers = () => {
                   className="provider-image"
                 />
               </div>
-              <button className="provider-button">
+              <button
+                className="provider-button"
+                onClick={() => handleProviderClick(provider.path)}
+              >
                 Learn more about<br></br> {provider.name}
               </button>
             </div>

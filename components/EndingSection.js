@@ -5,10 +5,7 @@ export default function Footer() {
     <footer className="footer-container">
       {/* Logo Section (Top Row) */}
       <div className="footer-logo-container">
-        <img
-          src="../images/logo.png"
-          alt="Alaska Skin Cancer Speciality Group"
-        />
+        <img src="/images/logo.png" alt="Alaska Skin Cancer Speciality Group" />
       </div>
 
       {/* Footer Sections (Bottom Row) */}

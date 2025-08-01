@@ -6,8 +6,8 @@ export default function Logo() {
     <div className="center-logo">
       <Link href={"/"} className="flex gap-1">
         <img
-          src="../images/logo.png"
-          alt="Nassar Plastic Surgery"
+          src="/images/logo.png"
+          alt="Alaska Skin Cancer Speciality Group"
           className="custom-logo"
         />
         <span className="text-primary font-bold mt-1"></span>

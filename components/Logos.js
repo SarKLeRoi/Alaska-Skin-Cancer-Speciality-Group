@@ -12,13 +12,18 @@ const Logos = () => {
   ];
 
   return (
-    <div className="logos-container">
-      {logos.map((logo, index) => (
-        <div key={index} className="logo-item">
-          <img src={logo} alt={`Logo ${index + 1}`} />
-        </div>
-      ))}
-    </div>
+    <>
+      <div className="logos-container">
+        {logos.map((logo, index) => (
+          <div key={index} className="logo-item">
+            <img src={logo} alt={`Logo ${index + 1}`} />
+          </div>
+        ))}
+      </div>
+      <h2 className="homepage-h2">
+        Our doctors are members of the following institutions and organizations
+      </h2>
+    </>
   );
 };
 
