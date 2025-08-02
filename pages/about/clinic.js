@@ -5,8 +5,6 @@ import Navbar from "../../components/Navbar";
 import TitleRow from "../../components/TitleRow";
 import TextCentered from "../../components/TextCentered";
 import LogoTab from "../../components/Logo-Tab";
-import Logos from "../../components/Logos";
-import Providers from "../../components/Providers";
 import EndingSection from "../../components/EndingSection";
 function group() {
   const baseUrl = "https://www.alaskaskincancer.com";
@@ -183,7 +181,7 @@ Although the participating clinics function independently, they collaborate in a
                 specialized dermatology office that focuses on skin cancer
                 diagnosis and treatments. They offer a comprehensive approach to
                 all skin cancer treatment including diagnosis, staging, surgical
-                treatment utilizing Moh’s Micrographic Surgery, as well as
+                treatment utilizing Moh&apos;s Micrographic Surgery, as well as
                 radiation therapy for all appropriate candidates.
               </p>
               <p className="clinic-description">
