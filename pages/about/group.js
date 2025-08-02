@@ -149,7 +149,7 @@ function group() {
           </div>
           <div className="image-overlay-subtitle">
             <h3 className="overlay-subtitle">
-              Multidisciplinary Group Featuring Alaska's Top Doctors
+              Multidisciplinary Group Featuring Alaska&apos;s Top Doctors
             </h3>
           </div>
         </div>
