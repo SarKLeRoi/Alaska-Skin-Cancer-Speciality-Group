@@ -82,15 +82,39 @@ function Navbar() {
                 </a>
               </Link>
             </li>
-            <li>
-              <Link legacyBehavior href="/about">
-                <a style={{ padding: 0 }} className="navbar-mobile-items">
-                  ABOUT
-                </a>
-              </Link>
+            <li onClick={() => handleSubMenu("about")}>
+              <span
+                className={`navbar-mobile-items ${
+                  activeMenu === "about" ? "active-submenu" : ""
+                }`}
+              >
+                About
+              </span>
+              {activeMenu === "about" && (
+                <ul className="submenu">
+                  <li>
+                    <Link href="/about">Overview</Link>
+                  </li>
+                  <li>
+                    <Link href="/about/clinic">About The Clinic</Link>
+                  </li>
+                  <li>
+                    <Link href="/about/group">About The Group</Link>
+                  </li>
+                  <li>
+                    <Link href="/about/providers">About The Providers</Link>
+                  </li>
+                </ul>
+              )}
             </li>
             <li onClick={() => handleSubMenu("skinCancer")}>
-              <span className="navbar-mobile-items">Skin Cancer</span>
+              <span
+                className={`navbar-mobile-items ${
+                  activeMenu === "skinCancer" ? "active-submenu" : ""
+                }`}
+              >
+                Skin Cancer
+              </span>
               {activeMenu === "skinCancer" && (
                 <ul className="submenu">
                   <li>
@@ -100,7 +124,13 @@ function Navbar() {
               )}
             </li>
             <li onClick={() => handleSubMenu("treatmentOptions")}>
-              <span className="navbar-mobile-items">Treatment Options</span>
+              <span
+                className={`navbar-mobile-items ${
+                  activeMenu === "treatmentOptions" ? "active-submenu" : ""
+                }`}
+              >
+                Treatment Options
+              </span>
               {activeMenu === "treatmentOptions" && (
                 <ul className="submenu">
                   <li>
@@ -110,7 +140,11 @@ function Navbar() {
               )}
             </li>
             <li onClick={() => handleSubMenu("gallery")}>
-              <span href="/gallery" className="navbar-mobile-items">
+              <span
+                className={`navbar-mobile-items ${
+                  activeMenu === "gallery" ? "active-submenu" : ""
+                }`}
+              >
                 Gallery
               </span>
               {activeMenu === "gallery" && (

@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/LpJWdpxsq-2p0TwQg1XN7/_buildManifest.js",
-    "static/LpJWdpxsq-2p0TwQg1XN7/_ssgManifest.js"
+    "static/3uQb_ITb8YjertKHLm9y7/_buildManifest.js",
+    "static/3uQb_ITb8YjertKHLm9y7/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "rootMainFilesTree": {},
@@ -16,14 +16,14 @@
       "static/chunks/framework-a4ddb9b21624b39b.js",
       "static/chunks/main-1b82f937bff51896.js",
       "static/chunks/179-e2f4e78bec612f40.js",
-      "static/chunks/182-06645abed0788b96.js",
-      "static/chunks/pages/index-67bc731a6e645e34.js"
+      "static/chunks/64-f4f050bbae37e8f9.js",
+      "static/chunks/pages/index-65a95b70edbc6b74.js"
     ],
     "/_app": [
       "static/chunks/webpack-8cac0b4b405cede1.js",
       "static/chunks/framework-a4ddb9b21624b39b.js",
       "static/chunks/main-1b82f937bff51896.js",
-      "static/css/0159acffb9d33748.css",
+      "static/css/17a1d8e129b7362b.css",
       "static/chunks/pages/_app-145b856b947d6264.js"
     ],
     "/_error": [
@@ -37,48 +37,56 @@
       "static/chunks/framework-a4ddb9b21624b39b.js",
       "static/chunks/main-1b82f937bff51896.js",
       "static/chunks/179-e2f4e78bec612f40.js",
-      "static/chunks/182-06645abed0788b96.js",
-      "static/chunks/pages/about/clinic-d3e62397023c361d.js"
+      "static/chunks/64-f4f050bbae37e8f9.js",
+      "static/chunks/pages/about/clinic-20dcdfa4d41536ff.js"
     ],
     "/about/group": [
       "static/chunks/webpack-8cac0b4b405cede1.js",
       "static/chunks/framework-a4ddb9b21624b39b.js",
       "static/chunks/main-1b82f937bff51896.js",
       "static/chunks/179-e2f4e78bec612f40.js",
-      "static/chunks/182-06645abed0788b96.js",
-      "static/chunks/pages/about/group-dfac0abf8dc61ab4.js"
+      "static/chunks/64-f4f050bbae37e8f9.js",
+      "static/chunks/pages/about/group-7917f1f1bdc3080f.js"
     ],
     "/about/providers": [
       "static/chunks/webpack-8cac0b4b405cede1.js",
       "static/chunks/framework-a4ddb9b21624b39b.js",
       "static/chunks/main-1b82f937bff51896.js",
       "static/chunks/179-e2f4e78bec612f40.js",
-      "static/chunks/182-06645abed0788b96.js",
-      "static/chunks/pages/about/providers-7a9e9bef23fa6dcd.js"
+      "static/chunks/64-f4f050bbae37e8f9.js",
+      "static/chunks/pages/about/providers-62c4cf257e200519.js"
     ],
     "/about/providers/DrDorizas": [
       "static/chunks/webpack-8cac0b4b405cede1.js",
       "static/chunks/framework-a4ddb9b21624b39b.js",
       "static/chunks/main-1b82f937bff51896.js",
       "static/chunks/179-e2f4e78bec612f40.js",
-      "static/chunks/469-ef92a0ca94edc463.js",
-      "static/chunks/pages/about/providers/DrDorizas-aac798808e11f91d.js"
+      "static/chunks/64-f4f050bbae37e8f9.js",
+      "static/chunks/pages/about/providers/DrDorizas-c01192a503562005.js"
     ],
     "/about/providers/DrGaller": [
       "static/chunks/webpack-8cac0b4b405cede1.js",
       "static/chunks/framework-a4ddb9b21624b39b.js",
       "static/chunks/main-1b82f937bff51896.js",
       "static/chunks/179-e2f4e78bec612f40.js",
-      "static/chunks/469-ef92a0ca94edc463.js",
-      "static/chunks/pages/about/providers/DrGaller-a1303e17d8b44e02.js"
+      "static/chunks/64-f4f050bbae37e8f9.js",
+      "static/chunks/pages/about/providers/DrGaller-9eb459ed2fe220c0.js"
     ],
     "/about/providers/DrNassar": [
       "static/chunks/webpack-8cac0b4b405cede1.js",
       "static/chunks/framework-a4ddb9b21624b39b.js",
       "static/chunks/main-1b82f937bff51896.js",
       "static/chunks/179-e2f4e78bec612f40.js",
-      "static/chunks/469-ef92a0ca94edc463.js",
-      "static/chunks/pages/about/providers/DrNassar-83bb1208d0948071.js"
+      "static/chunks/64-f4f050bbae37e8f9.js",
+      "static/chunks/pages/about/providers/DrNassar-f2d1538cd87cc419.js"
+    ],
+    "/contact": [
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/179-e2f4e78bec612f40.js",
+      "static/chunks/64-f4f050bbae37e8f9.js",
+      "static/chunks/pages/contact-046f1aabdf548d88.js"
     ]
   },
   "ampFirstPages": []
