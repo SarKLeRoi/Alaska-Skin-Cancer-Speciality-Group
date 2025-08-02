@@ -39,7 +39,7 @@ function HomePage() {
           property="og:description"
           content="Alaska Skin Cancer Specialty Group provides comprehensive skin cancer treatment including Mohs surgery, radiation therapy, and plastic reconstruction. Expert care in Palmer, Wasilla, and Anchorage."
         />
-        <meta property="og:image" content="/images/logo.png" />
+        <meta property="og:image" content="/images/logo.webp" />
         <meta property="og:url" content="https://www.alaskaskincancer.com" />
         <meta
           name="keywords"
@@ -61,8 +61,8 @@ function HomePage() {
             "@type": "MedicalOrganization",
             name: "Alaska Skin Cancer Specialty Group",
             url: "https://www.alaskaskincancer.com",
-            image: "https://www.alaskaskincancer.com/images/logo.png",
-            logo: "https://www.alaskaskincancer.com/images/logo.png",
+            image: "https://www.alaskaskincancer.com/images/logo.webp",
+            logo: "https://www.alaskaskincancer.com/images/logo.webp",
             description:
               "Comprehensive skin cancer treatment including Mohs surgery, radiation therapy, and plastic reconstruction. Expert care in Palmer, Wasilla, and Anchorage.",
             address: {

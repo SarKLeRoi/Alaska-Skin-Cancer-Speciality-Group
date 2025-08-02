@@ -28,7 +28,7 @@ function group() {
           property="og:description"
           content="Learn about the Alaska Skin Cancer Specialty Group - a collaborative team of dermatologists, Mohs surgeons, and plastic surgeons providing comprehensive skin cancer treatment across Alaska."
         />
-        <meta property="og:image" content="/images/logo.png" />
+        <meta property="og:image" content="/images/logo.webp" />
         <meta property="og:url" content="https://www.alaskaskincancer.com" />
         <meta
           name="keywords"
@@ -50,8 +50,8 @@ function group() {
             "@type": "MedicalOrganization",
             name: "Alaska Skin Cancer Specialty Group",
             url: "https://www.alaskaskincancer.com",
-            image: "https://www.alaskaskincancer.com/images/logo.png",
-            logo: "https://www.alaskaskincancer.com/images/logo.png",
+            image: "https://www.alaskaskincancer.com/images/logo.webp",
+            logo: "https://www.alaskaskincancer.com/images/logo.webp",
             description:
               "Learn about the Alaska Skin Cancer Specialty Group - a collaborative team of dermatologists, Mohs surgeons, and plastic surgeons providing comprehensive skin cancer treatment across Alaska.",
             address: {
@@ -139,19 +139,24 @@ function group() {
       <div>
         <TitleRow />
         <Navbar />
-        <section className="section1"></section>
-
-        {/* First Photo - Full Width */}
-        <div className="full-width-photo first-photo">
+        <div className="full-width-photo first-photo with-overlay">
           <img
             src="/images/AboutTheGroup1.webp"
             alt="Alaska Skin Cancer Specialty Group"
           />
+          <div className="image-overlay-title">
+            <h2 className="overlay-title">About The Group</h2>
+          </div>
+          <div className="image-overlay-subtitle">
+            <h3 className="overlay-subtitle">
+              Multidisciplinary Group Featuring Alaska's Top Doctors
+            </h3>
+          </div>
         </div>
 
         <LogoTab />
         <TextCentered
-          newPadding={"20px"}
+          newPadding={"5px"}
           title={"Alaska Skin Cancer Speciality Group"}
           description={`Dedicated to helping patients in Palmer, Wasilla, and Anchorage and the rest of the state, the Alaska Skin Cancer Specialty Group comprises a collaboration between highly trained physicians with expertise in dermatology, Mohs surgery, and Plastic and Reconstructive Surgery and radiation therapy. Our group employs cutting-edge technology and an evidence-based approach to diagnose and treat skin cancer, including basal cell carcinoma, squamous cell carcinoma, and melanoma. By combining our collective experience, we deliver personalized care that addresses both the medical and cosmetic aspects of skin cancer treatment. 
 

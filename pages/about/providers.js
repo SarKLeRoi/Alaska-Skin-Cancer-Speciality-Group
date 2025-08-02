@@ -28,7 +28,7 @@ function group() {
           property="og:description"
           content="Learn about the Alaska Skin Cancer Specialty Group - a collaborative team of dermatologists, Mohs surgeons, and plastic surgeons providing comprehensive skin cancer treatment across Alaska."
         />
-        <meta property="og:image" content="/images/logo.png" />
+        <meta property="og:image" content="/images/logo.webp" />
         <meta property="og:url" content="https://www.alaskaskincancer.com" />
         <meta
           name="keywords"
@@ -50,8 +50,8 @@ function group() {
             "@type": "MedicalOrganization",
             name: "Alaska Skin Cancer Specialty Group",
             url: "https://www.alaskaskincancer.com",
-            image: "https://www.alaskaskincancer.com/images/logo.png",
-            logo: "https://www.alaskaskincancer.com/images/logo.png",
+            image: "https://www.alaskaskincancer.com/images/logo.webp",
+            logo: "https://www.alaskaskincancer.com/images/logo.webp",
             description:
               "Learn about the Alaska Skin Cancer Specialty Group - a collaborative team of dermatologists, Mohs surgeons, and plastic surgeons providing comprehensive skin cancer treatment across Alaska.",
             address: {
@@ -140,11 +140,19 @@ function group() {
         <TitleRow />
         <Navbar />
         <section className="section1"></section>
-        <div className="full-width-photo first-photo">
+        <div className="full-width-photo first-photo with-overlay">
           <img
             src="/images/AboutTheGroup1.webp"
             alt="Alaska Skin Cancer Specialty Group"
           />
+          <div className="image-overlay-title">
+            <h2 className="overlay-title">Our Providers</h2>
+          </div>
+          <div className="image-overlay-subtitle">
+            <h3 className="overlay-subtitle">
+              Board-Certified Specialists in Dermatology And Plastic Surgery
+            </h3>
+          </div>
         </div>
         <LogoTab />
       </div>

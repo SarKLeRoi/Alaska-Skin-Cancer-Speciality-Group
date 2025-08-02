@@ -28,7 +28,7 @@ function group() {
           property="og:description"
           content="Learn about the Alaska Skin Cancer Specialty Group - a collaborative team of dermatologists, Mohs surgeons, and plastic surgeons providing comprehensive skin cancer treatment across Alaska."
         />
-        <meta property="og:image" content="/images/logo.png" />
+        <meta property="og:image" content="/images/logo.webp" />
         <meta property="og:url" content="https://www.alaskaskincancer.com" />
         <meta
           name="keywords"
@@ -50,8 +50,8 @@ function group() {
             "@type": "MedicalOrganization",
             name: "Alaska Skin Cancer Specialty Group",
             url: "https://www.alaskaskincancer.com",
-            image: "https://www.alaskaskincancer.com/images/logo.png",
-            logo: "https://www.alaskaskincancer.com/images/logo.png",
+            image: "https://www.alaskaskincancer.com/images/logo.webp",
+            logo: "https://www.alaskaskincancer.com/images/logo.webp",
             description:
               "Learn about the Alaska Skin Cancer Specialty Group - a collaborative team of dermatologists, Mohs surgeons, and plastic surgeons providing comprehensive skin cancer treatment across Alaska.",
             address: {
@@ -141,21 +141,28 @@ function group() {
         <Navbar />
         <section className="section1"></section>
 
-        {/* First Photo - Full Width */}
-        <div className="full-width-photo first-photo">
+        <div className="full-width-photo first-photo with-overlay">
           <img
             src="/images/AboutTheGroup1.webp"
             alt="Alaska Skin Cancer Specialty Group"
           />
+          <div className="image-overlay-title">
+            <h2 className="overlay-title">Participating Clincs</h2>
+          </div>
+          <div className="image-overlay-subtitle">
+            <h3 className="overlay-subtitle">
+              Collaborative Approach including Alaska's Top Clinics
+            </h3>
+          </div>
         </div>
-
         <LogoTab />
         <TextCentered
-          newPadding={"20px"}
+          newPadding={"5px"}
           title={"Alaska Skin Cancer Speciality Group"}
-          description={`Dedicated to helping patients in Palmer, Wasilla, and Anchorage and the rest of the state, the Alaska Skin Cancer Specialty Group comprises a collaboration between highly trained physicians with expertise in dermatology, Mohs surgery, and Plastic and Reconstructive Surgery and radiation therapy. Our group employs cutting-edge technology and an evidence-based approach to diagnose and treat skin cancer, including basal cell carcinoma, squamous cell carcinoma, and melanoma. By combining our collective experience, we deliver personalized care that addresses both the medical and cosmetic aspects of skin cancer treatment. 
+          description={`Our multidisciplinary group includes several clinics which work together in a collaborative approach to offer patients the highest level of care for all matters skin cancer related. The participating clinics include Capstone Dermatology and Matsu Plastic Surgery. Located in Wasilla and Palmer, our goal is to serve the Anchorage region as well, in the near future.
 
-The Group’s mission is to provide compassionate, patient-centered care, ensuring each individual understands their options and feels supported every step of the way. Whether you require a skin cancer screening, a specialized surgical procedure, or a comprehensive reconstruction plan, the Alaska Skin Cancer Specialty Group is committed to helping you achieve optimal outcomes. Their collaborative approach ensures that every patient receives timely, targeted, and effective treatment.`}
+
+Although the participating clinics function independently, they collaborate in a synergistic manner to offer patients an A-Z approach to skin cancer treatment, including routine skin surveillance, biopsies, topical treatments, surgical treatments with reconstruction, and radiation therapy.`}
         />
         <LogoTab />
         {/* Second Photo - Full Width */}
@@ -166,9 +173,90 @@ The Group’s mission is to provide compassionate, patient-centered care, ensuri
           />
         </div>
         <LogoTab />
-        <Logos />
+        {/* Capstone Dermatology Section */}
+        <div className="clinic-section">
+          <div className="clinic-content">
+            <div className="clinic-text">
+              <h2 className="clinic-title">Capstone Dermatology</h2>
+              <p className="clinic-description">
+                Capstone Dermatology, located in Wasilla, is a highly
+                specialized dermatology office that focuses on skin cancer
+                diagnosis and treatments. They offer a comprehensive approach to
+                all skin cancer treatment including diagnosis, staging, surgical
+                treatment utilizing Moh’s Micrographic Surgery, as well as
+                radiation therapy for all appropriate candidates.
+              </p>
+              <p className="clinic-description">
+                With multiple board-certified Dermatologist in the office, each
+                physician specializes in a specific aspect of skin cancer
+                treatment
+              </p>
+              <div className="clinic-contact">
+                <p>
+                  <strong>Address:</strong> 3066 E Meridian Park Loop, Wasilla,
+                  AK 99654
+                </p>
+                <p>
+                  <strong>Phone:</strong> 907-357-2332
+                </p>
+                <p>
+                  <strong>Hours:</strong> Monday-Friday 7:30am - 5:30pm
+                </p>
+              </div>
+            </div>
+            <div className="clinic-image">
+              <img
+                src="/images/about-the-clinc/CapstoneClinic.webp"
+                alt="Capstone Dermatology Building"
+                className="clinic-photo"
+              />
+            </div>
+          </div>
+        </div>
+
+        <LogoTab />
+        {/* Matsu Plastic Surgery Section */}
+        <div className="clinic-section">
+          <div className="clinic-content">
+            <div className="clinic-text">
+              <h2 className="clinic-title">Matsu Plastic Surgery</h2>
+              <p className="clinic-description">
+                As part of Matsu Regional Medical Center, Matsu Plastic Surgery
+                offers a comprehensive approach to plastic and reconstructive
+                surgery. With a double-board certified plastic surgeon whom
+                collaborates closely with Capstone Dermatology on all skin
+                cancer treatments, we are able to offer reconstructions that
+                restore patients’ form and function.
+              </p>
+              <p className="clinic-description">
+                Our reconstructive options focus on helping patients return to
+                normal life as quickly as possible, with results that are
+                cosmetically appealing and do not leave deforming scars or
+                alterations in appearence.
+              </p>
+              <div className="clinic-contact">
+                <p>
+                  <strong>Address:</strong> 2490 S Woodworth Loop, Suite 310,
+                  Palmer, AK 99645
+                </p>
+                <p>
+                  <strong>Phone:</strong> 907-861-6743
+                </p>
+                <p>
+                  <strong>Hours:</strong> Monday-Friday 8:00am - 7:30pm
+                </p>
+              </div>
+            </div>
+            <div className="clinic-image">
+              <img
+                src="/images/about-the-clinc/MatsuPlasticSurgery.webp"
+                alt="Matsu Regional Medical Center"
+                className="clinic-photo"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-      <Providers />
       <LogoTab />
       <EndingSection />
     </>

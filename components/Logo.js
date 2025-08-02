@@ -6,7 +6,7 @@ export default function Logo() {
     <div className="center-logo">
       <Link href={"/"} className="flex gap-1">
         <img
-          src="/images/logo.png"
+          src="/images/logo.webp"
           alt="Alaska Skin Cancer Speciality Group"
           className="custom-logo"
         />
