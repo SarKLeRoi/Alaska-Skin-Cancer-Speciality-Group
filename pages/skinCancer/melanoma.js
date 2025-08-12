@@ -237,7 +237,9 @@ At our practice, we use advanced diagnostic techniques to accurately identify me
             <div className="clinic-section">
               <div className="clinic-content">
                 <div className="clinic-text">
-                  <h2 id="abcde-heading">The ABCDEs of Melanoma</h2>
+                  <h2 id="abcde-heading" className="warning-signs-heading">
+                    The ABCDEs of Melanoma
+                  </h2>
                   <p className="clinic-description">
                     It is essential for patients to be vigilant about changes in
                     their skin and to regularly perform self-examinations. The

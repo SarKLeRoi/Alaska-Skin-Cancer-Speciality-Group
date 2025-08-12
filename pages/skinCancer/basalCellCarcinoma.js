@@ -251,7 +251,10 @@ Our practice is experienced in diagnosing and treating BCC using tools such as d
             <div className="clinic-section">
               <div className="clinic-content">
                 <div className="clinic-text">
-                  <h2 id="warning-signs-heading">
+                  <h2
+                    id="warning-signs-heading"
+                    className="warning-signs-heading"
+                  >
                     Warning Signs of Basal Cell Carcinoma
                   </h2>
                   <p className="clinic-description">

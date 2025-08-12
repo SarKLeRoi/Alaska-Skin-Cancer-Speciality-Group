@@ -3206,6 +3206,15 @@ textarea::placeholder {
   letter-spacing: 2px;
 }
 
+.warning-signs-heading {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: #3a3a3a;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
 .clinic-description {
   font-family: "Roboto", sans-serif;
   font-size: 1.3rem;

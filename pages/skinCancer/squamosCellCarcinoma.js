@@ -247,7 +247,10 @@ We are committed to identifying SCC early using clinical evaluation, dermoscopy,
             <div className="clinic-section">
               <div className="clinic-content">
                 <div className="clinic-text">
-                  <h2 id="warning-signs-heading">
+                  <h2
+                    id="warning-signs-heading"
+                    className="warning-signs-heading"
+                  >
                     Warning Signs of Squamous Cell Carcinoma
                   </h2>
                   <p className="clinic-description">
