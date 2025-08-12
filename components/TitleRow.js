@@ -1,11 +1,17 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
+import Link from "next/link";
 import Logo from "../components/Logo";
 
 export default function TitleRow() {
   return (
-    <div className="title-row">
+    <header className="title-row" role="banner">
       <div className="insurances-link">
-        <a href="/insurances">LIST OF INSURACNES WE ACCEPT</a>
+        <Link
+          href="/insurances"
+          aria-label="View list of insurance plans we accept"
+        >
+          LIST OF INSURANCES WE ACCEPT
+        </Link>
       </div>
       <Logo />
       <div className="contact-link">
@@ -15,6 +21,8 @@ export default function TitleRow() {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
+          aria-hidden="true"
+          focusable="false"
         >
           <path
             strokeLinecap="round"
@@ -23,8 +31,13 @@ export default function TitleRow() {
           />
         </svg>
 
-        <a href="tel:907-357-2332">907-357-2332</a>
+        <a
+          href="tel:907-357-2332"
+          aria-label="Call Alaska Skin Cancer Specialty Group at 907-357-2332"
+        >
+          907-357-2332
+        </a>
       </div>
-    </div>
+    </header>
   );
 }

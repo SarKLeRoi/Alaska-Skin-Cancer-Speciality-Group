@@ -19,15 +19,15 @@ const DrNassar = () => {
           },
           {
             type: "paragraph",
-            text: "<strong></strong> Dr. Nassar's contributions to the field of plastic surgery extend beyond his clinical practice. He is a prolific author, with numerous publications to his name, spanning both the reconstructive and cosmetic literature. Additionally, he has lent his knowledge as an editor and co-author to a notable book, as well as many other book chapters and has had the honor of presenting at esteemed conferences worldwide.",
+            text: "Dr. Nassar's contributions to the field of plastic surgery extend beyond his clinical practice. He is a prolific author, with numerous publications to his name, spanning both the reconstructive and cosmetic literature. Additionally, he has lent his knowledge as an editor and co-author to a notable book, as well as many other book chapters and has had the honor of presenting at esteemed conferences worldwide.",
           },
           {
             type: "paragraph",
-            text: "<strong></strong>With a keen focus on both reconstructive and cosmetic surgery, Dr. Nassar offers care across the spectrum of plastic and reconstructive surgery with a particular interest and specialization in Mohs Reconstruction. His dedication to staying at the forefront of advancements in his field ensures that his patients receive the highest quality care and the most advanced techniques available.",
+            text: "With a keen focus on both reconstructive and cosmetic surgery, Dr. Nassar offers care across the spectrum of plastic and reconstructive surgery with a particular interest and specialization in Mohs Reconstruction. His dedication to staying at the forefront of advancements in his field ensures that his patients receive the highest quality care and the most advanced techniques available.",
           },
           {
             type: "paragraph",
-            text: "<strong></strong>Dr Nassar is recognized by many in his field as a leading expert in Mohs Reconstruction of the face, utilizing various techniques, flaps and grafts to restore form, function and harmony to the face.",
+            text: "Dr Nassar is recognized by many in his field as a leading expert in Mohs Reconstruction of the face, utilizing various techniques, flaps and grafts to restore form, function and harmony to the face.",
           },
         ],
       },
@@ -71,6 +71,7 @@ const DrNassar = () => {
           Dr. Amer H. Nassar, MD - Double Board-Certified Plastic Surgeon |
           Alaska Skin Cancer Specialty Group
         </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
           content="Dr. Amer H. Nassar, MD, is a double board-certified Plastic and Reconstructive surgeon specializing in Mohs Reconstruction. Expert in facial reconstruction and plastic surgery."
@@ -92,11 +93,11 @@ const DrNassar = () => {
         <meta property="og:type" content="profile" />
         <meta
           property="og:url"
-          content="https://alaskaskincancer.com/about/dr-nassar"
+          content="https://www.alaskaskincancer.com/about/providers/DrNassar"
         />
         <meta
           property="og:image"
-          content="/images/doctors/AmerNassar_headshot.webp"
+          content="https://www.alaskaskincancer.com/images/doctors/AmerNassar_headshot.webp"
         />
         <meta
           property="og:site_name"
@@ -113,11 +114,11 @@ const DrNassar = () => {
         />
         <meta
           name="twitter:image"
-          content="/images/doctors/AmerNassar_headshot.webp"
+          content="https://www.alaskaskincancer.com/images/doctors/AmerNassar_headshot.webp"
         />
         <link
           rel="canonical"
-          href="https://alaskaskincancer.com/about/dr-nassar"
+          href="https://www.alaskaskincancer.com/about/providers/DrNassar"
         />
         <link rel="icon" href="/images/favicon.png" />
       </Head>
@@ -135,12 +136,13 @@ const DrNassar = () => {
               "Double Board-Certified Plastic and Reconstructive Surgeon",
             description:
               "Dr. Amer H. Nassar, MD, is a double board-certified Plastic and Reconstructive surgeon specializing in Mohs Reconstruction and facial reconstruction techniques.",
-            image: "/images/doctors/AmerNassar_headshot.webp",
-            url: "https://alaskaskincancer.com/about/dr-nassar",
+            image:
+              "https://www.alaskaskincancer.com/images/doctors/AmerNassar_headshot.webp",
+            url: "https://www.alaskaskincancer.com/about/providers/DrNassar",
             worksFor: {
               "@type": "MedicalOrganization",
               name: "Alaska Skin Cancer Specialty Group",
-              url: "https://alaskaskincancer.com",
+              url: "https://www.alaskaskincancer.com",
             },
             medicalSpecialty: [
               "Plastic Surgery",
@@ -181,19 +183,25 @@ const DrNassar = () => {
                 "@type": "ListItem",
                 position: 1,
                 name: "Home",
-                item: "https://alaskaskincancer.com/",
+                item: "https://www.alaskaskincancer.com/",
               },
               {
                 "@type": "ListItem",
                 position: 2,
                 name: "About",
-                item: "https://alaskaskincancer.com/about",
+                item: "https://www.alaskaskincancer.com/about",
               },
               {
                 "@type": "ListItem",
                 position: 3,
+                name: "Providers",
+                item: "https://www.alaskaskincancer.com/about/providers",
+              },
+              {
+                "@type": "ListItem",
+                position: 4,
                 name: "Dr. Amer H. Nassar, MD",
-                item: "https://alaskaskincancer.com/about/dr-nassar",
+                item: "https://www.alaskaskincancer.com/about/providers/DrNassar",
               },
             ],
           }),
@@ -201,7 +209,7 @@ const DrNassar = () => {
       />
 
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=G-QDN4FFSPG8`}
+        src={`https://www.googletagmanager.com/gtag/js?id=G-NJLRMTQK48`}
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -209,11 +217,13 @@ const DrNassar = () => {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-QDN4FFSPG8');
+          gtag('config', 'G-NJLRMTQK48');
         `}
       </Script>
 
-      <DoctorBio doctor={doctor} />
+      <main>
+        <DoctorBio doctor={doctor} />
+      </main>
     </>
   );
 };

@@ -8,35 +8,63 @@ import LogoTab from "../../components/Logo-Tab";
 import Logos from "../../components/Logos";
 import Providers from "../../components/Providers";
 import EndingSection from "../../components/EndingSection";
-function group() {
+function providers() {
   const baseUrl = "https://www.alaskaskincancer.com";
 
   return (
     <>
       {/* <Preloader /> */}
       <Head>
-        <title>About - Alaska Skin Cancer Specialty Group</title>
+        <title>The Providers - Alaska Skin Cancer Specialty Group</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="Learn about the Alaska Skin Cancer Specialty Group - a collaborative team of dermatologists, Mohs surgeons, and plastic surgeons providing comprehensive skin cancer treatment across Alaska."
+          content="Meet the Alaska Skin Cancer Specialty Group providers - board-certified specialists in dermatology, Mohs surgery, and plastic surgery. Expert doctors providing comprehensive skin cancer treatment across Alaska."
         />
         <meta
           property="og:title"
-          content="About - Alaska Skin Cancer Specialty Group"
+          content="The Providers - Alaska Skin Cancer Specialty Group"
         />
         <meta
           property="og:description"
-          content="Learn about the Alaska Skin Cancer Specialty Group - a collaborative team of dermatologists, Mohs surgeons, and plastic surgeons providing comprehensive skin cancer treatment across Alaska."
+          content="Meet the Alaska Skin Cancer Specialty Group providers - board-certified specialists in dermatology, Mohs surgery, and plastic surgery. Expert doctors providing comprehensive skin cancer treatment across Alaska."
         />
-        <meta property="og:image" content="/images/logo.webp" />
-        <meta property="og:url" content="https://www.alaskaskincancer.com" />
+        <meta
+          property="og:image"
+          content="https://www.alaskaskincancer.com/images/logo.webp"
+        />
+        <meta
+          property="og:url"
+          content="https://www.alaskaskincancer.com/about/providers"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:site_name"
+          content="Alaska Skin Cancer Specialty Group"
+        />
+
+        {/* Twitter Cards */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="The Providers - Alaska Skin Cancer Specialty Group"
+        />
+        <meta
+          name="twitter:description"
+          content="Meet the Alaska Skin Cancer Specialty Group providers - board-certified specialists in dermatology, Mohs surgery, and plastic surgery."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.alaskaskincancer.com/images/logo.webp"
+        />
+
         <meta
           name="keywords"
-          content="Alaska skin cancer group, skin cancer specialists, Mohs surgery Alaska, dermatology Alaska, skin cancer treatment Alaska, skin cancer doctors Alaska"
+          content="Alaska skin cancer doctors, skin cancer specialists, Mohs surgery Alaska, dermatology Alaska, plastic surgery Alaska, Dr. Dorizas, Dr. Galler, Dr. Nassar"
         />
         <meta name="author" content="Alaska Skin Cancer Specialty Group"></meta>
         <link rel="icon" href="/images/favicon.png" />
-        <link rel="canonical" href={baseUrl} />
+        <link rel="canonical" href={`${baseUrl}/about/providers`} />
       </Head>
 
       {/* Structured Data - Medical Organization */}
@@ -53,7 +81,7 @@ function group() {
             image: "https://www.alaskaskincancer.com/images/logo.webp",
             logo: "https://www.alaskaskincancer.com/images/logo.webp",
             description:
-              "Learn about the Alaska Skin Cancer Specialty Group - a collaborative team of dermatologists, Mohs surgeons, and plastic surgeons providing comprehensive skin cancer treatment across Alaska.",
+              "Meet the Alaska Skin Cancer Specialty Group providers - board-certified specialists in dermatology, Mohs surgery, and plastic surgery. Expert doctors providing comprehensive skin cancer treatment across Alaska.",
             address: {
               "@type": "PostalAddress",
               addressCountry: "US",
@@ -116,7 +144,13 @@ function group() {
                 "@type": "ListItem",
                 position: 2,
                 name: "About",
-                item: "https://www.alaskaskincancer.com/about/group",
+                item: "https://www.alaskaskincancer.com/about",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: "The Providers",
+                item: "https://www.alaskaskincancer.com/about/providers",
               },
             ],
           }),
@@ -125,7 +159,7 @@ function group() {
 
       {/* Google Analytics */}
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=G-QDN4FFSPG8`}
+        src={`https://www.googletagmanager.com/gtag/js?id=G-NJLRMTQK48`}
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -133,34 +167,48 @@ function group() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-QDN4FFSPG8');
+          gtag('config', 'G-NJLRMTQK48');
         `}
       </Script>
       <div>
         <TitleRow />
         <Navbar />
-        <section className="section1"></section>
-        <div className="full-width-photo first-photo with-overlay">
-          <img
-            src="/images/AboutTheGroup1.webp"
-            alt="Alaska Skin Cancer Specialty Group"
-          />
-          <div className="image-overlay-title">
-            <h2 className="overlay-title">Our Providers</h2>
-          </div>
-          <div className="image-overlay-subtitle">
-            <h3 className="overlay-subtitle">
-              Board-Certified Specialists in Dermatology And Plastic Surgery
-            </h3>
-          </div>
-        </div>
-        <LogoTab />
+        <main>
+          <section className="section1" aria-hidden="true"></section>
+          <section className="hero-section" aria-labelledby="hero-heading">
+            <div className="full-width-photo first-photo with-overlay">
+              <img
+                src="/images/AboutTheGroup1.webp"
+                alt="Alaska Skin Cancer Specialty Group medical providers - board-certified dermatologists and plastic surgeons"
+              />
+              <div className="image-overlay-title">
+                <h1 id="hero-heading" className="overlay-title">
+                  Our Providers
+                </h1>
+              </div>
+              <div className="image-overlay-subtitle">
+                <h2 className="overlay-subtitle">
+                  Board-Certified Specialists in Dermatology And Plastic Surgery
+                </h2>
+              </div>
+            </div>
+          </section>
+          <LogoTab />
+          <section
+            className="providers-showcase"
+            aria-labelledby="providers-heading"
+          >
+            <h2 id="providers-heading" className="sr-only">
+              Meet Our Medical Specialists
+            </h2>
+            <Providers />
+          </section>
+          <LogoTab />
+        </main>
       </div>
-      <Providers />
-      <LogoTab />
       <EndingSection />
     </>
   );
 }
 
-export default group;
+export default providers;

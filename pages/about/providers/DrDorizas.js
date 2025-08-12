@@ -19,15 +19,15 @@ const DrDorizas = () => {
           },
           {
             type: "paragraph",
-            text: "<strong></strong> Recognized for his excellence in patient care and clinical expertise, Dr. Dorizas was voted among the Best Dermatologists in the U.S. in both 2022 and 2023 through Statista and Newsweek by his peers.",
+            text: "Recognized for his excellence in patient care and clinical expertise, Dr. Dorizas was voted among the Best Dermatologists in the U.S. in both 2022 and 2023 through Statista and Newsweek by his peers.",
           },
           {
             type: "paragraph",
-            text: "<strong></strong> Dr. Dorizas is dedicated to providing the highest standard of dermatologic care, integrating evidence-based medicine with a patient-centered philosophy. His approach ensures that patients receive personalized, cutting-edge treatments tailored to their individual needs, fostering trust and optimal outcomes.",
+            text: "Dr. Dorizas is dedicated to providing the highest standard of dermatologic care, integrating evidence-based medicine with a patient-centered philosophy. His approach ensures that patients receive personalized, cutting-edge treatments tailored to their individual needs, fostering trust and optimal outcomes.",
           },
           {
             type: "paragraph",
-            text: "<strong></strong> In addition to his clinical practice, Dr. Dorizas has played a pivotal role in dermatologic education, actively training residents and shaping the next generation of dermatologists. He is published in many prominent dermatology and dermatologic surgery peer-reviewed journals as well as authored book chapters. His expertise has been sought at national conferences, where he has delivered lectures on innovative treatments and inflammatory skin disease. As a recognized leader in the field, he collaborates with other experts and industry pioneers to advance dermatologic research and refine patient care methodologies.",
+            text: "In addition to his clinical practice, Dr. Dorizas has played a pivotal role in dermatologic education, actively training residents and shaping the next generation of dermatologists. He is published in many prominent dermatology and dermatologic surgery peer-reviewed journals as well as authored book chapters. His expertise has been sought at national conferences, where he has delivered lectures on innovative treatments and inflammatory skin disease. As a recognized leader in the field, he collaborates with other experts and industry pioneers to advance dermatologic research and refine patient care methodologies.",
           },
         ],
       },
@@ -36,27 +36,23 @@ const DrDorizas = () => {
         content: [
           {
             type: "paragraph",
-            text: "<strong></strong> Diplomate of the American Board of Dermatology",
+            text: "Diplomate of the American Board of Dermatology",
           },
           {
             type: "paragraph",
-            text: "<strong></strong> Diplomate of the American Board of DermatologyFellow of the American",
+            text: "Fellow of the American Academy of Dermatology",
           },
           {
             type: "paragraph",
-            text: "<strong></strong> Academy of Dermatology",
+            text: "Member of the Florida Society of Dermatology and Dermatologic Surgery",
           },
           {
             type: "paragraph",
-            text: "<strong></strong> Member of the Florida Society of Dermatology and Dermatologic Surgery",
+            text: "Member of American Society for Dermatologic Surgery",
           },
           {
             type: "paragraph",
-            text: "<strong></strong> Member of American Society for Dermatologic Surgery",
-          },
-          {
-            type: "paragraph",
-            text: "<strong></strong> Member of the American Society of Mohs Surgery",
+            text: "Member of the American Society of Mohs Surgery",
           },
         ],
       },
@@ -65,7 +61,7 @@ const DrDorizas = () => {
         content: [
           {
             type: "paragraph",
-            text: "<strong></strong> University of Miami",
+            text: "University of Miami",
           },
         ],
       },
@@ -74,7 +70,7 @@ const DrDorizas = () => {
         content: [
           {
             type: "paragraph",
-            text: "<strong></strong> University at Buffalo",
+            text: "University at Buffalo",
           },
         ],
       },
@@ -83,7 +79,7 @@ const DrDorizas = () => {
         content: [
           {
             type: "paragraph",
-            text: "<strong></strong> University of Szeged",
+            text: "University of Szeged",
           },
         ],
       },
@@ -132,6 +128,7 @@ const DrDorizas = () => {
           Dr. Andrew S. Dorizas, MD, FAAD, ACMS - Double Board-Certified
           Dermatologist | Alaska Skin Cancer Specialty Group
         </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
           content="Dr. Andrew S. Dorizas, MD, FAAD, ACMS, is a double board-certified dermatologist and Mohs surgeon. Expert in advanced skin cancer treatments and comprehensive medical dermatology."
@@ -153,11 +150,11 @@ const DrDorizas = () => {
         <meta property="og:type" content="profile" />
         <meta
           property="og:url"
-          content="https://alaskaskincancer.com/about/dr-dorizas"
+          content="https://www.alaskaskincancer.com/about/providers/DrDorizas"
         />
         <meta
           property="og:image"
-          content="/images/doctors/AndrewDorizas_Headshot.webp"
+          content="https://www.alaskaskincancer.com/images/doctors/AndrewDorizas_Headshot.webp"
         />
         <meta
           property="og:site_name"
@@ -174,11 +171,11 @@ const DrDorizas = () => {
         />
         <meta
           name="twitter:image"
-          content="/images/doctors/AndrewDorizas_Headshot.webp"
+          content="https://www.alaskaskincancer.com/images/doctors/AndrewDorizas_Headshot.webp"
         />
         <link
           rel="canonical"
-          href="https://alaskaskincancer.com/about/dr-dorizas"
+          href="https://www.alaskaskincancer.com/about/providers/DrDorizas"
         />
         <link rel="icon" href="/images/favicon.png" />
       </Head>
@@ -195,12 +192,13 @@ const DrDorizas = () => {
             jobTitle: "Double Board-Certified Dermatologist and Mohs Surgeon",
             description:
               "Dr. Andrew S. Dorizas is a double board-certified dermatologist and Mohs surgeon by the American Board of Dermatology, specializing in advanced skin cancer treatments and comprehensive medical dermatology.",
-            image: "/images/doctors/AndrewDorizas_Headshot.webp",
-            url: "https://alaskaskincancer.com/about/dr-dorizas",
+            image:
+              "https://www.alaskaskincancer.com/images/doctors/AndrewDorizas_Headshot.webp",
+            url: "https://www.alaskaskincancer.com/about/providers/DrDorizas",
             worksFor: {
               "@type": "MedicalOrganization",
               name: "Alaska Skin Cancer Specialty Group",
-              url: "https://alaskaskincancer.com",
+              url: "https://www.alaskaskincancer.com",
             },
             medicalSpecialty: [
               "Dermatology",
@@ -244,19 +242,25 @@ const DrDorizas = () => {
                 "@type": "ListItem",
                 position: 1,
                 name: "Home",
-                item: "https://alaskaskincancer.com/",
+                item: "https://www.alaskaskincancer.com/",
               },
               {
                 "@type": "ListItem",
                 position: 2,
                 name: "About",
-                item: "https://alaskaskincancer.com/about",
+                item: "https://www.alaskaskincancer.com/about",
               },
               {
                 "@type": "ListItem",
                 position: 3,
+                name: "Providers",
+                item: "https://www.alaskaskincancer.com/about/providers",
+              },
+              {
+                "@type": "ListItem",
+                position: 4,
                 name: "Dr. Andrew S. Dorizas, MD, FAAD, ACMS",
-                item: "https://alaskaskincancer.com/about/dr-dorizas",
+                item: "https://www.alaskaskincancer.com/about/providers/DrDorizas",
               },
             ],
           }),
@@ -264,7 +268,7 @@ const DrDorizas = () => {
       />
 
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=G-QDN4FFSPG8`}
+        src={`https://www.googletagmanager.com/gtag/js?id=G-NJLRMTQK48`}
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -272,11 +276,13 @@ const DrDorizas = () => {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-QDN4FFSPG8');
+          gtag('config', 'G-NJLRMTQK48');
         `}
       </Script>
 
-      <DoctorBio doctor={doctor} />
+      <main>
+        <DoctorBio doctor={doctor} />
+      </main>
     </>
   );
 };

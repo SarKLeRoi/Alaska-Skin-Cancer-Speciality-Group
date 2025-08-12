@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Script from "next/script";
+import Link from "next/link";
 import Navbar from "../components/Navbar";
 import TitleRow from "../components/TitleRow";
 import VideoBackground from "../components/VideoBackground";
@@ -10,7 +11,7 @@ import Logos from "../components/Logos";
 import Providers from "../components/Providers";
 import EndingSection from "../components/EndingSection";
 function HomePage() {
-  const baseUrl = "https://www.nassarplasticsurgery.com";
+  const baseUrl = "https://www.alaskaskincancer.com";
 
   const mySVG = (
     <img
@@ -27,6 +28,7 @@ function HomePage() {
         <title>
           Alaska Skin Cancer Specialty Group - Expert Skin Cancer Treatment
         </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
           content="Alaska Skin Cancer Specialty Group provides comprehensive skin cancer treatment including Mohs surgery, radiation therapy, and plastic reconstruction. Expert care in Palmer, Wasilla, and Anchorage."
@@ -39,8 +41,32 @@ function HomePage() {
           property="og:description"
           content="Alaska Skin Cancer Specialty Group provides comprehensive skin cancer treatment including Mohs surgery, radiation therapy, and plastic reconstruction. Expert care in Palmer, Wasilla, and Anchorage."
         />
-        <meta property="og:image" content="/images/logo.webp" />
+        <meta
+          property="og:image"
+          content="https://www.alaskaskincancer.com/images/logo.webp"
+        />
         <meta property="og:url" content="https://www.alaskaskincancer.com" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:site_name"
+          content="Alaska Skin Cancer Specialty Group"
+        />
+
+        {/* Twitter Cards */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Alaska Skin Cancer Specialty Group - Expert Skin Cancer Treatment"
+        />
+        <meta
+          name="twitter:description"
+          content="Alaska Skin Cancer Specialty Group provides comprehensive skin cancer treatment including Mohs surgery, radiation therapy, and plastic reconstruction."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.alaskaskincancer.com/images/logo.webp"
+        />
+
         <meta
           name="keywords"
           content="skin cancer treatment, Mohs surgery, basal cell carcinoma, squamous cell carcinoma, melanoma, Alaska, Palmer, Wasilla, Anchorage, dermatology, skin cancer specialist, skin cancer doctor, skin cancer surgery"
@@ -142,7 +168,7 @@ function HomePage() {
 
       {/* Google Analytics */}
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=G-QDN4FFSPG8`}
+        src={`https://www.googletagmanager.com/gtag/js?id=G-NJLRMTQK48`}
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -150,7 +176,7 @@ function HomePage() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-QDN4FFSPG8');
+          gtag('config', 'G-NJLRMTQK48');
         `}
       </Script>
 
@@ -160,81 +186,96 @@ function HomePage() {
         <section className="section1">
           <VideoBackground />
         </section>
-        <div className="grid-container">
-          <div className="grid-item">
-            {/* <img
-              src="path-to-your-svg1.svg"
-              alt="Dermatology"
-              className="grid-image"
-            /> */}
-            {mySVG}
-            <p>
-              Multispeciality group including Dermatology, Moh’s Surgery,
-              Radiation Therapy and Plastic & Reconstructive Surgery
-            </p>
+        <section
+          className="features-section"
+          aria-labelledby="features-heading"
+        >
+          <div className="grid-container">
+            <div className="grid-item">
+              {mySVG}
+              <p>
+                Multispecialty group including Dermatology, Mohs Surgery,
+                Radiation Therapy and Plastic & Reconstructive Surgery
+              </p>
+            </div>
+            <div className="grid-item">
+              {mySVG}
+              <p>Thousands of successfully treated patients</p>
+            </div>
+            <div className="grid-item">
+              {mySVG}
+              <p>
+                Nationally recognized gold-standard of care, therapy, and
+                treatments
+              </p>
+            </div>
+            <div className="grid-item">
+              {mySVG}
+              <p>Virtually all insurances accepted</p>
+            </div>
           </div>
-          <div className="grid-item">
-            {mySVG}
-            <p>Thousands of successfully treated patients</p>
+        </section>
+        <section className="about-section" aria-labelledby="about-heading">
+          <div className="homepage-thirdsection-title">
+            <h1 id="about-heading">Alaska skin cancer </h1>
+            <br></br>
+            <h2>Specialty group</h2>
           </div>
-          <div className="grid-item">
-            {mySVG}
-            <p>
-              Nationally recognized gold-standard of care, therapy, and
-              treatments
-            </p>
+          <TextCentered
+            newPadding={"20px"}
+            description={`Skin cancer treatment requires a comprehensive approach to diagnose, treat and reconstruct the various types of cancers. The Alaska Skin Cancer Specialty Group is a multi-specialty group of physicians and surgeons who specialize in all aspects of skin cancer treatment, including biopsies and diagnostics, surgical treatment, Mohs Micrographic Surgery, Radiation therapy, and definitive reconstruction by a Plastic Surgeon. We pride ourselves in being the only group in Alaska to offer such an extensive and thorough approach to skin cancer management for all of our patients.`}
+          />
+          <Logos />
+        </section>
+        <Providers />
+        <LogoTab />
+        <section
+          className="section4"
+          aria-labelledby="skin-cancer-types-heading"
+        >
+          <h1 id="skin-cancer-types-heading">About Skin Cancer</h1>
+          <div className="body-parts-image-container">
+            <Link href="/skinCancer/basalCellCarcinoma" className="image-link">
+              <img
+                src="images/skin-cancer/BasalCell.webp"
+                loading="lazy"
+                alt="Basal Cell Carcinoma - the most common type of skin cancer"
+              />
+              <span className="image-text">Basal Cell Carcinoma</span>
+            </Link>
+            <Link
+              href="/skinCancer/squamosCellCarcinoma"
+              className="image-link"
+            >
+              <img
+                src="images/skin-cancer/SquamousCell.webp"
+                loading="lazy"
+                alt="Squamous Cell Carcinoma - aggressive form of skin cancer"
+              />
+              <span className="image-text">Squamous Cell Carcinoma</span>
+            </Link>
+            <Link href="/skinCancer/melanoma" className="image-link">
+              <img
+                src="images/skin-cancer/Melanoma.webp"
+                loading="lazy"
+                alt="Melanoma - the most dangerous type of skin cancer"
+              />
+              <span className="image-text">Melanoma</span>
+            </Link>
           </div>
-          <div className="grid-item">
-            {mySVG}
-            <p>Virtually all insurances accepted</p>
+          <div className="view-more-button-container">
+            <Link href="/skinCancer">
+              <button
+                className="view-more-button"
+                aria-label="View more information about skin cancer types"
+              >
+                View More
+              </button>
+            </Link>
           </div>
-        </div>
-        <div className="homepage-thirdsection-title">
-          <h1>Alaska skin cancer </h1>
-          <br></br>
-          <h2>Speciality group</h2>
-        </div>
-        <TextCentered
-          newPadding={"20px"}
-          description={`Skin cancer treatment requires a comprehensive approach to diagnose, treat and reconstruct the various types of cancers. The Alaska Skin Cancer Speciality Group is a multi-speciality group of physicians and surgeons who specialize in all aspects of skin cancer treatment, including biopsies and diagnostics, surgical treatment, Moh’s Micrographic Surgery, Radiation therapy, and definitive reconstruction by a Plastic Surgeon. We pride ourselves in being the only group in Alaska to offer such an extensive and thorough approach to skin cancer management for all of our patients.`}
-        />
-        <Logos />
+        </section>
+        <LogoTab />
       </div>
-      <Providers />
-      <LogoTab />
-      <section className="section4">
-        <h1>About Skin Cancer</h1>
-        <div className="body-parts-image-container">
-          <a href="/basalCellCarcinoma" className="image-link">
-            <img
-              src="images/skin-cancer/BasalCell.webp"
-              loading="lazy"
-              alt="Face plastic surgeries"
-            />
-            <span className="image-text">Basal Cell Carcinoma</span>
-          </a>
-          <a href="/squamousCellCarcinoma" className="image-link">
-            <img
-              src="images/skin-cancer/SquamousCell.webp"
-              loading="lazy"
-              alt="Squamous Cell Carcinoma"
-            />
-            <span className="image-text">Squamous Cell Carcinoma</span>
-          </a>
-          <a href="/melanoma" className="image-link">
-            <img
-              src="images/skin-cancer/Melanoma.webp"
-              loading="lazy"
-              alt="Melanoma"
-            />
-            <span className="image-text">Melanoma</span>
-          </a>
-        </div>
-        <div className="view-more-button-container">
-          <button className="view-more-button">View More</button>
-        </div>
-      </section>
-      <LogoTab />
       <EndingSection />
     </>
   );

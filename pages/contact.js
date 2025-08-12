@@ -123,7 +123,7 @@ function group() {
 
       {/* Google Analytics */}
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=G-QDN4FFSPG8`}
+        src={`https://www.googletagmanager.com/gtag/js?id=G-NJLRMTQK48`}
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -131,7 +131,7 @@ function group() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-QDN4FFSPG8');
+          gtag('config', 'G-NJLRMTQK48');
         `}
       </Script>
       <div>
@@ -141,14 +141,14 @@ function group() {
 
         <div className="full-width-photo first-photo with-overlay">
           <img
-            src="/images/ContactUs.webp"
+            src="/images/contact.jpg"
             alt="Alaska Skin Cancer Specialty Group"
           />
           <div className="image-overlay-title">
             <h2 className="overlay-title"></h2>
           </div>
           <div className="image-overlay-subtitle">
-            <h3 className="overlay-subtitle">Contact Us</h3>
+            <h3 className="overlay-subtitle black-subtitle">Contact Us</h3>
           </div>
         </div>
         <LogoTab />

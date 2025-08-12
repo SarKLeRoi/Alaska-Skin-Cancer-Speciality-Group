@@ -15,28 +15,56 @@ function group() {
     <>
       {/* <Preloader /> */}
       <Head>
-        <title>About - Alaska Skin Cancer Specialty Group</title>
+        <title>The Group - Alaska Skin Cancer Specialty Group</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
           content="Learn about the Alaska Skin Cancer Specialty Group - a collaborative team of dermatologists, Mohs surgeons, and plastic surgeons providing comprehensive skin cancer treatment across Alaska."
         />
         <meta
           property="og:title"
-          content="About - Alaska Skin Cancer Specialty Group"
+          content="The Group - Alaska Skin Cancer Specialty Group"
         />
         <meta
           property="og:description"
           content="Learn about the Alaska Skin Cancer Specialty Group - a collaborative team of dermatologists, Mohs surgeons, and plastic surgeons providing comprehensive skin cancer treatment across Alaska."
         />
-        <meta property="og:image" content="/images/logo.webp" />
-        <meta property="og:url" content="https://www.alaskaskincancer.com" />
+        <meta
+          property="og:image"
+          content="https://www.alaskaskincancer.com/images/logo.webp"
+        />
+        <meta
+          property="og:url"
+          content="https://www.alaskaskincancer.com/about/group"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:site_name"
+          content="Alaska Skin Cancer Specialty Group"
+        />
+
+        {/* Twitter Cards */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="The Group - Alaska Skin Cancer Specialty Group"
+        />
+        <meta
+          name="twitter:description"
+          content="Learn about the Alaska Skin Cancer Specialty Group - a collaborative team of dermatologists, Mohs surgeons, and plastic surgeons providing comprehensive skin cancer treatment across Alaska."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.alaskaskincancer.com/images/logo.webp"
+        />
+
         <meta
           name="keywords"
           content="Alaska skin cancer group, skin cancer specialists, Mohs surgery Alaska, dermatology Alaska, skin cancer treatment Alaska, skin cancer doctors Alaska"
         />
         <meta name="author" content="Alaska Skin Cancer Specialty Group"></meta>
         <link rel="icon" href="/images/favicon.png" />
-        <link rel="canonical" href={baseUrl} />
+        <link rel="canonical" href={`${baseUrl}/about/group`} />
       </Head>
 
       {/* Structured Data - Medical Organization */}
@@ -116,6 +144,12 @@ function group() {
                 "@type": "ListItem",
                 position: 2,
                 name: "About",
+                item: "https://www.alaskaskincancer.com/about",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: "The Group",
                 item: "https://www.alaskaskincancer.com/about/group",
               },
             ],
@@ -125,7 +159,7 @@ function group() {
 
       {/* Google Analytics */}
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=G-QDN4FFSPG8`}
+        src={`https://www.googletagmanager.com/gtag/js?id=G-NJLRMTQK48`}
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -133,45 +167,69 @@ function group() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-QDN4FFSPG8');
+          gtag('config', 'G-NJLRMTQK48');
         `}
       </Script>
       <div>
         <TitleRow />
         <Navbar />
-        <div className="full-width-photo first-photo with-overlay">
-          <img
-            src="/images/AboutTheGroup1.webp"
-            alt="Alaska Skin Cancer Specialty Group"
-          />
-          <div className="image-overlay-title">
-            <h2 className="overlay-title">About The Group</h2>
-          </div>
-          <div className="image-overlay-subtitle">
-            <h3 className="overlay-subtitle">
-              Multidisciplinary Group Featuring Alaska&apos;s Top Doctors
-            </h3>
-          </div>
-        </div>
+        <main>
+          <section className="hero-section" aria-labelledby="hero-heading">
+            <div className="full-width-photo first-photo with-overlay">
+              <img
+                src="/images/AboutTheGroup1.webp"
+                alt="Alaska Skin Cancer Specialty Group team of dermatologists, Mohs surgeons, and plastic surgeons"
+              />
+              <div className="image-overlay-title">
+                <h1 id="hero-heading" className="overlay-title">
+                  About The Group
+                </h1>
+              </div>
+              <div className="image-overlay-subtitle">
+                <h2 className="overlay-subtitle">
+                  Multidisciplinary Group Featuring Alaska&apos;s Top Doctors
+                </h2>
+              </div>
+            </div>
+          </section>
 
-        <LogoTab />
-        <TextCentered
-          newPadding={"5px"}
-          title={"Alaska Skin Cancer Speciality Group"}
-          description={`Dedicated to helping patients in Palmer, Wasilla, and Anchorage and the rest of the state, the Alaska Skin Cancer Specialty Group comprises a collaboration between highly trained physicians with expertise in dermatology, Mohs surgery, and Plastic and Reconstructive Surgery and radiation therapy. Our group employs cutting-edge technology and an evidence-based approach to diagnose and treat skin cancer, including basal cell carcinoma, squamous cell carcinoma, and melanoma. By combining our collective experience, we deliver personalized care that addresses both the medical and cosmetic aspects of skin cancer treatment. 
+          <LogoTab />
+          <section className="intro-section" aria-labelledby="intro-heading">
+            <TextCentered
+              newPadding={"5px"}
+              title={"Alaska Skin Cancer Specialty Group"}
+              description={`Dedicated to helping patients in Palmer, Wasilla, and Anchorage and the rest of the state, the Alaska Skin Cancer Specialty Group comprises a collaboration between highly trained physicians with expertise in dermatology, Mohs surgery, and Plastic and Reconstructive Surgery and radiation therapy. Our group employs cutting-edge technology and an evidence-based approach to diagnose and treat skin cancer, including basal cell carcinoma, squamous cell carcinoma, and melanoma. By combining our collective experience, we deliver personalized care that addresses both the medical and cosmetic aspects of skin cancer treatment. 
 
-The Group’s mission is to provide compassionate, patient-centered care, ensuring each individual understands their options and feels supported every step of the way. Whether you require a skin cancer screening, a specialized surgical procedure, or a comprehensive reconstruction plan, the Alaska Skin Cancer Specialty Group is committed to helping you achieve optimal outcomes. Their collaborative approach ensures that every patient receives timely, targeted, and effective treatment.`}
-        />
-        <LogoTab />
-        {/* Second Photo - Full Width */}
-        <div className="full-width-photo">
-          <img
-            src="/images/AboutTheGroup2.webp"
-            alt="Alaska Skin Cancer Specialty Group"
-          />
-        </div>
-        <LogoTab />
-        <Logos />
+The Group's mission is to provide compassionate, patient-centered care, ensuring each individual understands their options and feels supported every step of the way. Whether you require a skin cancer screening, a specialized surgical procedure, or a comprehensive reconstruction plan, the Alaska Skin Cancer Specialty Group is committed to helping you achieve optimal outcomes. Their collaborative approach ensures that every patient receives timely, targeted, and effective treatment.`}
+            />
+          </section>
+          <LogoTab />
+          {/* Second Photo - Full Width */}
+          <section
+            className="overview-section"
+            aria-labelledby="overview-heading"
+          >
+            <h2 id="overview-heading" className="sr-only">
+              Our Collaborative Medical Team
+            </h2>
+            <div className="full-width-photo">
+              <img
+                src="/images/AboutTheGroup2.webp"
+                alt="Alaska Skin Cancer Specialty Group collaborative team and advanced medical facilities"
+              />
+            </div>
+          </section>
+          <LogoTab />
+          <section
+            className="certifications-section"
+            aria-labelledby="certifications-heading"
+          >
+            <h2 id="certifications-heading" className="sr-only">
+              Professional Certifications and Associations
+            </h2>
+            <Logos />
+          </section>
+        </main>
       </div>
       <Providers />
       <LogoTab />

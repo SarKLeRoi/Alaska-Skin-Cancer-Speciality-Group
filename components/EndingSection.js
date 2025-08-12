@@ -1,21 +1,27 @@
 import React from "react";
+import Link from "next/link";
 
 export default function Footer() {
+  const handleContactClick = () => {
+    // Navigate to contact page
+    window.location.href = "/contact";
+  };
+
   return (
-    <footer className="footer-container">
+    <footer className="footer-container" role="contentinfo">
       {/* Logo Section (Top Row) */}
       <div className="footer-logo-container">
         <img
           src="/images/logo.webp"
-          alt="Alaska Skin Cancer Speciality Group"
+          alt="Alaska Skin Cancer Specialty Group logo"
         />
       </div>
 
       {/* Footer Sections (Bottom Row) */}
       <div className="footer-sections">
         {/* Locations Section */}
-        <div className="footer-column">
-          <h3>LOCATIONS</h3>
+        <section className="footer-column" aria-labelledby="locations-heading">
+          <h3 id="locations-heading">LOCATIONS</h3>
           <br />
 
           <h4>Capstone Dermatology</h4>
@@ -30,37 +36,64 @@ export default function Footer() {
             1100 E Diamond Blvd #310,
             <br /> Anchorage, AK 99515
           </p>
-          <br></br>
+          <br />
           <h4>Matsu Plastic Surgery</h4>
           <p>
             2490 S Woodworth Loop #310,
             <br /> Palmer, AK 99645
           </p>
-        </div>
+        </section>
 
         {/* Quick Links Section */}
-        <div className="footer-column">
-          <h3>QUICK LINKS</h3>
+        <nav className="footer-column" aria-labelledby="quick-links-heading">
+          <h3 id="quick-links-heading">QUICK LINKS</h3>
           <br />
           <ul>
             <li>
-              <a href="/about">About</a>
+              <Link
+                href="/about"
+                aria-label="Learn about Alaska Skin Cancer Specialty Group"
+              >
+                About
+              </Link>
             </li>
             <li>
-              <a href="/skin-cancer">Skin Cancer</a>
+              <Link
+                href="/skinCancer"
+                aria-label="Information about skin cancer types and treatments"
+              >
+                Skin Cancer
+              </Link>
             </li>
             <li>
-              <a href="/treatment-options">Treatment Options</a>
+              <Link
+                href="/treatmentOptions"
+                aria-label="View available treatment options"
+              >
+                Treatment Options
+              </Link>
             </li>
             <li>
-              <a href="/gallery">Gallery</a>
+              <Link
+                href="/gallery"
+                aria-label="View before and after treatment gallery"
+              >
+                Gallery
+              </Link>
             </li>
           </ul>
-        </div>
+        </nav>
 
         {/* Contact Button */}
         <div className="footer-contact">
-          <button className="contact-button">CONTACT US</button>
+          <button
+            className="contact-button"
+            onClick={handleContactClick}
+            aria-label="Contact Alaska Skin Cancer Specialty Group"
+            type="button"
+          >
+            CONTACT US
+          </button>
         </div>
       </div>
     </footer>

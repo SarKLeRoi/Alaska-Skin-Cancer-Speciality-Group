@@ -13,36 +13,52 @@ function BodyPartsLandingPage({
 }) {
   return (
     <div>
-      <section className="about-start">
+      <header className="about-start">
         <TitleRow />
         <Navbar />
-      </section>
+      </header>
 
-      <section
-        className="section1-bodyparts"
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundPosition: backgroundPosition,
-        }}
-      >
-        <Fade left duration={2000}>
-          <div className="title-of-bodypart">
-            <h2>{title}</h2>
-          </div>
-        </Fade>
-      </section>
+      <main>
+        <section
+          className="section1-bodyparts"
+          style={{
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundPosition: backgroundPosition,
+          }}
+          aria-labelledby="page-title"
+          role="banner"
+        >
+          <Fade left duration={2000}>
+            <div className="title-of-bodypart">
+              <h1 id="page-title">{title}</h1>
+            </div>
+          </Fade>
+        </section>
 
-      <section className="face-section2">
-        <Fade bottom duration={2000}>
-          <div className="container">
-            {menuItems.map((item) => (
-              <a key={item.text} href={item.link} className="menu-item">
-                {item.text}
-              </a>
-            ))}
-          </div>
-        </Fade>
-      </section>
+        <section className="face-section2" aria-labelledby="navigation-heading">
+          <h2 id="navigation-heading" className="sr-only">
+            {title} Treatment Options
+          </h2>
+          <Fade bottom duration={2000}>
+            <nav
+              className="container"
+              role="navigation"
+              aria-label={`${title} navigation menu`}
+            >
+              {menuItems.map((item) => (
+                <Link
+                  key={item.text}
+                  href={item.link}
+                  className="menu-item"
+                  aria-label={`Learn more about ${item.text}`}
+                >
+                  {item.text}
+                </Link>
+              ))}
+            </nav>
+          </Fade>
+        </section>
+      </main>
 
       <EndingSection />
     </div>

@@ -74,7 +74,7 @@ const DrGaller = () => {
           {
             type: "paragraph",
             className: "bullet-circle",
-            text: "<strong>•</strong> Radiation Therapy: Dr. Galler offers Image-Guided Superficial Radiation Therapy (IGSRT) for treating non-melanoma skin cancers, providing patients with non-surgical treatment options. Further applications include keloids as well as less common tumors such as Kaposi’s Sarcoma. Notably, Dr. Galler's clinic was the first in Alaska to offer The GentleCure™ Experience for non-melanoma skin cancer treatment with over a decade of treating NSMC with IGSRT.",
+            text: "<strong>•</strong> Radiation Therapy: Dr. Galler offers Image-Guided Superficial Radiation Therapy (IGSRT) for treating non-melanoma skin cancers, providing patients with non-surgical treatment options. Further applications include keloids as well as less common tumors such as Kaposi's Sarcoma. Notably, Dr. Galler's clinic was the first in Alaska to offer The GentleCure™ Experience for non-melanoma skin cancer treatment with over a decade of treating NSMC with IGSRT.",
           },
         ],
       },
@@ -98,7 +98,7 @@ const DrGaller = () => {
         content: [
           {
             type: "paragraph",
-            text: "<strong></strong> Throughout his career, Dr. Galler has contributed to dermatological research, with publications in peer-reviewed journals such as Cutis. His research interests include innovative diagnostic techniques and treatment modalities for various skin conditions.",
+            text: "Throughout his career, Dr. Galler has contributed to dermatological research, with publications in peer-reviewed journals such as Cutis. His research interests include innovative diagnostic techniques and treatment modalities for various skin conditions.",
           },
         ],
       },
@@ -107,7 +107,7 @@ const DrGaller = () => {
         content: [
           {
             type: "paragraph",
-            text: "<strong></strong> Dr. Galler is committed to providing personalized, comprehensive care that addresses each patient's unique needs and concerns. His extensive experience in both traditional and innovative treatments ensures that patients receive the most effective and appropriate care for their specific conditions.",
+            text: "Dr. Galler is committed to providing personalized, comprehensive care that addresses each patient's unique needs and concerns. His extensive experience in both traditional and innovative treatments ensures that patients receive the most effective and appropriate care for their specific conditions.",
           },
         ],
       },
@@ -121,6 +121,7 @@ const DrGaller = () => {
           Dr. Blake R. Galler, DO - Board-Certified Dermatologist | Alaska Skin
           Cancer Specialty Group
         </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
           content="Dr. Blake R. Galler, DO, is a board-certified dermatologist specializing in laser therapies and radiation treatments. Expert in teledermatology and skin cancer care in Alaska."
@@ -142,11 +143,11 @@ const DrGaller = () => {
         <meta property="og:type" content="profile" />
         <meta
           property="og:url"
-          content="https://alaskaskincancer.com/about/dr-galler"
+          content="https://www.alaskaskincancer.com/about/providers/DrGaller"
         />
         <meta
           property="og:image"
-          content="/images/doctors/BlakeGaller_headshot.webp"
+          content="https://www.alaskaskincancer.com/images/doctors/BlakeGaller_headshot.webp"
         />
         <meta
           property="og:site_name"
@@ -163,11 +164,11 @@ const DrGaller = () => {
         />
         <meta
           name="twitter:image"
-          content="/images/doctors/BlakeGaller_headshot.webp"
+          content="https://www.alaskaskincancer.com/images/doctors/BlakeGaller_headshot.webp"
         />
         <link
           rel="canonical"
-          href="https://alaskaskincancer.com/about/dr-galler"
+          href="https://www.alaskaskincancer.com/about/providers/DrGaller"
         />
         <link rel="icon" href="/images/favicon.png" />
       </Head>
@@ -184,12 +185,13 @@ const DrGaller = () => {
             jobTitle: "Board-Certified Dermatologist",
             description:
               "Dr. Blake R. Galler, DO, is a board-certified dermatologist renowned for his extensive expertise in laser therapies and radiation treatments for various skin conditions.",
-            image: "/images/doctors/BlakeGaller_headshot.webp",
-            url: "https://alaskaskincancer.com/about/dr-galler",
+            image:
+              "https://www.alaskaskincancer.com/images/doctors/BlakeGaller_headshot.webp",
+            url: "https://www.alaskaskincancer.com/about/providers/DrGaller",
             worksFor: {
               "@type": "MedicalOrganization",
               name: "Alaska Skin Cancer Specialty Group",
-              url: "https://alaskaskincancer.com",
+              url: "https://www.alaskaskincancer.com",
             },
             medicalSpecialty: [
               "Dermatology",
@@ -229,19 +231,25 @@ const DrGaller = () => {
                 "@type": "ListItem",
                 position: 1,
                 name: "Home",
-                item: "https://alaskaskincancer.com/",
+                item: "https://www.alaskaskincancer.com/",
               },
               {
                 "@type": "ListItem",
                 position: 2,
                 name: "About",
-                item: "https://alaskaskincancer.com/about",
+                item: "https://www.alaskaskincancer.com/about",
               },
               {
                 "@type": "ListItem",
                 position: 3,
+                name: "Providers",
+                item: "https://www.alaskaskincancer.com/about/providers",
+              },
+              {
+                "@type": "ListItem",
+                position: 4,
                 name: "Dr. Blake R. Galler, DO",
-                item: "https://alaskaskincancer.com/about/dr-galler",
+                item: "https://www.alaskaskincancer.com/about/providers/DrGaller",
               },
             ],
           }),
@@ -249,7 +257,7 @@ const DrGaller = () => {
       />
 
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=G-QDN4FFSPG8`}
+        src={`https://www.googletagmanager.com/gtag/js?id=G-NJLRMTQK48`}
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -257,11 +265,13 @@ const DrGaller = () => {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-QDN4FFSPG8');
+          gtag('config', 'G-NJLRMTQK48');
         `}
       </Script>
 
-      <DoctorBio doctor={doctor} />
+      <main>
+        <DoctorBio doctor={doctor} />
+      </main>
     </>
   );
 };
