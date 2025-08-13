@@ -1,1 +1,10 @@
-{"/404":"pages/404.html","/about":"pages/about.html","/about/clinic":"pages/about/clinic.html","/about/group":"pages/about/group.html","/about/providers":"pages/about/providers.html","/_error":"pages/_error.js","/_app":"pages/_app.js","/contact":"pages/contact.html","/about/providers/DrDorizas":"pages/about/providers/DrDorizas.html","/gallery":"pages/gallery.html","/":"pages/index.html","/insurances":"pages/insurances.html","/legal/accessbilityStatement":"pages/legal/accessbilityStatement.html","/about/providers/DrGaller":"pages/about/providers/DrGaller.html","/about/providers/DrNassar":"pages/about/providers/DrNassar.html","/legal/hipaaNotice":"pages/legal/hipaaNotice.html","/skinCancer/atypicalLesions":"pages/skinCancer/atypicalLesions.html","/skinCancer":"pages/skinCancer.html","/skinCancer/basalCellCarcinoma":"pages/skinCancer/basalCellCarcinoma.html","/skinCancer/melanoma":"pages/skinCancer/melanoma.html","/skinCancer/squamosCellCarcinoma":"pages/skinCancer/squamosCellCarcinoma.html","/treatmentOptions":"pages/treatmentOptions.html","/treatmentOptions/MohsMicrographicSurgery":"pages/treatmentOptions/MohsMicrographicSurgery.html","/treatmentOptions/MohsReconstruction":"pages/treatmentOptions/MohsReconstruction.html","/treatmentOptions/radiationTherapy":"pages/treatmentOptions/radiationTherapy.html","/legal/medicalDisclaimer":"pages/legal/medicalDisclaimer.html","/legal/termsOfUse":"pages/legal/termsOfUse.html","/legal/privacyPolicy":"pages/legal/privacyPolicy.html","/_document":"pages/_document.js"}
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/skinCancer": "pages/skinCancer.js",
+  "/skinCancer/melanoma": "pages/skinCancer/melanoma.js",
+  "/about/group": "pages/about/group.js",
+  "/contact": "pages/contact.js",
+  "/404": "pages/404.js"
+}

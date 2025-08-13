@@ -3461,9 +3461,11 @@ textarea::placeholder {
     padding: 40px 25px;
   }
 
-  .clinic-title {
-    font-size: 1.8rem;
+  .clinic-title,
+  .warning-signs-heading {
+    font-size: 1.5rem;
   }
+
   .clinic-description {
     font-size: 1rem;
   }
@@ -3773,4 +3775,9 @@ ul.clinic-description li {
     font-size: 10px;
     padding: 6px 8px;
   }
+}
+.contact-button,
+.view-more-button {
+  color: #000000; /* Set to your desired color */
+  text-decoration: none; /* Remove underline if it's a link */
 }
