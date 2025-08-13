@@ -341,8 +341,8 @@ export default function AccessibilityStatement() {
                 <div className="legal-subsection">
                   <h4>Report Accessibility Issues</h4>
                   <p>
-                    We welcome feedback on our website's accessibility. If you
-                    encounter barriers or have suggestions for improvement,
+                    We welcome feedback on our website&apos;s accessibility. If
+                    you encounter barriers or have suggestions for improvement,
                     please contact us:
                   </p>
                   <p>
@@ -375,7 +375,7 @@ export default function AccessibilityStatement() {
                 <h2>7. Assessment and Updates</h2>
                 <div className="legal-subsection">
                   <h4>Assessment Method</h4>
-                  <p>We assessed our website's accessibility through:</p>
+                  <p>We assessed our website&apos;s accessibility through:</p>
                   <p>• Automated accessibility testing tools</p>
                   <p>• Manual testing with keyboard navigation</p>
                   <p>

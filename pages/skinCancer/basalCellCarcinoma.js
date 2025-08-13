@@ -6,8 +6,6 @@ import Navbar from "../../components/Navbar";
 import TitleRow from "../../components/TitleRow";
 import TextCentered from "../../components/TextCentered";
 import LogoTab from "../../components/Logo-Tab";
-import Logos from "../../components/Logos";
-import Providers from "../../components/Providers";
 import EndingSection from "../../components/EndingSection";
 
 function basalCellCarcinoma() {
@@ -315,7 +313,7 @@ Our practice is experienced in diagnosing and treating BCC using tools such as d
                     </li>
                     <li>
                       <strong>Open sores that bleed, ooze, or crust</strong> and
-                      don't heal
+                      don&apos;t heal
                     </li>
                     <li>
                       <strong>Shiny, translucent patches</strong> that may be

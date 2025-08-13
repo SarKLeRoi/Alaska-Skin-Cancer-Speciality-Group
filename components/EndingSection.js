@@ -161,11 +161,13 @@ export default function Footer() {
       >
         <p>All rights reserved to Alaska Skin Cancer Specialty Group © 2025</p>
         <div className="footer-links">
-          <a href="/legal/termsOfUse">Terms Of Use</a>
-          <a href="/legal/privacyPolicy">Privacy Policy</a>
-          <a href="/legal/accessbilityStatement">Accessibility Statement</a>
-          <a href="/legal/medicalDisclaimer">Medical Disclaimer</a>
-          <a href="/legal/hipaaNotice">HIPAA Notice</a>
+          <Link href="/legal/termsOfUse">Terms Of Use</Link>
+          <Link href="/legal/privacyPolicy">Privacy Policy</Link>
+          <Link href="/legal/accessbilityStatement">
+            Accessibility Statement
+          </Link>
+          <Link href="/legal/medicalDisclaimer">Medical Disclaimer</Link>
+          <Link href="/legal/hipaaNotice">HIPAA Notice</Link>
         </div>
       </motion.div>
     </motion.footer>
