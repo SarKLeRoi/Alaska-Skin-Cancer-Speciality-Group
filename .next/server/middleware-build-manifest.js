@@ -25,20 +25,15 @@ self.__BUILD_MANIFEST = {
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/about/group": [
+    "/blog": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/about/group.js"
+      "static/chunks/pages/blog.js"
     ],
-    "/contact": [
+    "/blog2": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/contact.js"
-    ],
-    "/skinCancer/melanoma": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/skinCancer/melanoma.js"
+      "static/chunks/pages/blog2.js"
     ]
   },
   "ampFirstPages": []
