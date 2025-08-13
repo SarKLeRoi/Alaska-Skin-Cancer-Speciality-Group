@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Script from "next/script";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import TitleRow from "../components/TitleRow";
 import VideoBackground from "../components/VideoBackground";
@@ -12,6 +13,52 @@ import Providers from "../components/Providers";
 import EndingSection from "../components/EndingSection";
 function HomePage() {
   const baseUrl = "https://www.alaskaskincancer.com";
+
+  // Optimized Animation variants (prevent layout shifts)
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 }, // Reduced from y: 60
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }, // Faster duration
+    },
+  };
+
+  const staggerContainer = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.15, // Reduced stagger for smoother experience
+      },
+    },
+  };
+
+  const scaleIn = {
+    hidden: { opacity: 0, scale: 0.95 }, // Reduced from scale: 0.8
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5, ease: "easeOut" }, // Faster duration
+    },
+  };
+
+  const slideInLeft = {
+    hidden: { opacity: 0, x: -30 }, // Reduced from x: -60
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
+  const slideInRight = {
+    hidden: { opacity: 0, x: 30 }, // Reduced from x: 60
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
 
   const mySVG = (
     <img
@@ -184,86 +231,161 @@ function HomePage() {
         <TitleRow />
         <Navbar />
         <section className="section1">
-          <VideoBackground />
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+          >
+            <VideoBackground />
+          </motion.div>
         </section>
         <section
           className="features-section"
           aria-labelledby="features-heading"
         >
-          <div className="grid-container">
-            <div className="grid-item">
+          <motion.div
+            className="grid-container"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={staggerContainer}
+          >
+            <motion.div className="grid-item" variants={fadeInUp}>
               {mySVG}
               <p>
                 Multispecialty group including Dermatology, Mohs Surgery,
                 Radiation Therapy and Plastic & Reconstructive Surgery
               </p>
-            </div>
-            <div className="grid-item">
+            </motion.div>
+            <motion.div className="grid-item" variants={fadeInUp}>
               {mySVG}
               <p>Thousands of successfully treated patients</p>
-            </div>
-            <div className="grid-item">
+            </motion.div>
+            <motion.div className="grid-item" variants={fadeInUp}>
               {mySVG}
               <p>
                 Nationally recognized gold-standard of care, therapy, and
                 treatments
               </p>
-            </div>
-            <div className="grid-item">
+            </motion.div>
+            <motion.div className="grid-item" variants={fadeInUp}>
               {mySVG}
               <p>Virtually all insurances accepted</p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </section>
         <section className="about-section" aria-labelledby="about-heading">
-          <div className="homepage-thirdsection-title">
+          <motion.div
+            className="homepage-thirdsection-title"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={slideInLeft}
+          >
             <h1 id="about-heading">Alaska skin cancer </h1>
             <br></br>
             <h2>Specialty group</h2>
-          </div>
-          <TextCentered
-            newPadding={"20px"}
-            description={`Skin cancer treatment requires a comprehensive approach to diagnose, treat and reconstruct the various types of cancers. The Alaska Skin Cancer Specialty Group is a multi-specialty group of physicians and surgeons who specialize in all aspects of skin cancer treatment, including biopsies and diagnostics, surgical treatment, Mohs Micrographic Surgery, Radiation therapy, and definitive reconstruction by a Plastic Surgeon. We pride ourselves in being the only group in Alaska to offer such an extensive and thorough approach to skin cancer management for all of our patients.`}
-          />
-          <Logos />
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeInUp}
+          >
+            <TextCentered
+              newPadding={"20px"}
+              description={`Skin cancer treatment requires a comprehensive approach to diagnose, treat and reconstruct the various types of cancers. The Alaska Skin Cancer Specialty Group is a multi-specialty group of physicians and surgeons who specialize in all aspects of skin cancer treatment, including biopsies and diagnostics, surgical treatment, Mohs Micrographic Surgery, Radiation therapy, and definitive reconstruction by a Plastic Surgeon. We pride ourselves in being the only group in Alaska to offer such an extensive and thorough approach to skin cancer management for all of our patients.`}
+            />
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={scaleIn}
+          >
+            <Logos />
+          </motion.div>
         </section>
-        <Providers />
-        <LogoTab />
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={fadeInUp}
+        >
+          <Providers />
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={scaleIn}
+        >
+          <LogoTab />
+        </motion.div>
         <section
           className="section4"
           aria-labelledby="skin-cancer-types-heading"
         >
-          <h1 id="skin-cancer-types-heading">About Skin Cancer</h1>
-          <div className="body-parts-image-container">
-            <Link href="/skinCancer/basalCellCarcinoma" className="image-link">
-              <img
-                src="images/skin-cancer/BasalCell.webp"
-                loading="lazy"
-                alt="Basal Cell Carcinoma - the most common type of skin cancer"
-              />
-              <span className="image-text">Basal Cell Carcinoma</span>
-            </Link>
-            <Link
-              href="/skinCancer/squamosCellCarcinoma"
-              className="image-link"
-            >
-              <img
-                src="images/skin-cancer/SquamousCell.webp"
-                loading="lazy"
-                alt="Squamous Cell Carcinoma - aggressive form of skin cancer"
-              />
-              <span className="image-text">Squamous Cell Carcinoma</span>
-            </Link>
-            <Link href="/skinCancer/melanoma" className="image-link">
-              <img
-                src="images/skin-cancer/Melanoma.webp"
-                loading="lazy"
-                alt="Melanoma - the most dangerous type of skin cancer"
-              />
-              <span className="image-text">Melanoma</span>
-            </Link>
-          </div>
-          <div className="view-more-button-container">
+          <motion.h1
+            id="skin-cancer-types-heading"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={fadeInUp}
+          >
+            About Skin Cancer
+          </motion.h1>
+          <motion.div
+            className="body-parts-image-container"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={staggerContainer}
+          >
+            <motion.div variants={slideInLeft}>
+              <Link
+                href="/skinCancer/basalCellCarcinoma"
+                className="image-link"
+              >
+                <img
+                  src="images/skin-cancer/BasalCell.webp"
+                  loading="lazy"
+                  alt="Basal Cell Carcinoma - the most common type of skin cancer"
+                />
+                <span className="image-text">Basal Cell Carcinoma</span>
+              </Link>
+            </motion.div>
+            <motion.div variants={fadeInUp}>
+              <Link
+                href="/skinCancer/squamosCellCarcinoma"
+                className="image-link"
+              >
+                <img
+                  src="images/skin-cancer/SquamousCell.webp"
+                  loading="lazy"
+                  alt="Squamous Cell Carcinoma - aggressive form of skin cancer"
+                />
+                <span className="image-text">Squamous Cell Carcinoma</span>
+              </Link>
+            </motion.div>
+            <motion.div variants={slideInRight}>
+              <Link href="/skinCancer/melanoma" className="image-link">
+                <img
+                  src="images/skin-cancer/Melanoma.webp"
+                  loading="lazy"
+                  alt="Melanoma - the most dangerous type of skin cancer"
+                />
+                <span className="image-text">Melanoma</span>
+              </Link>
+            </motion.div>
+          </motion.div>
+          <motion.div
+            className="view-more-button-container"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={fadeInUp}
+          >
             <Link href="/skinCancer">
               <button
                 className="view-more-button"
@@ -272,9 +394,16 @@ function HomePage() {
                 View More
               </button>
             </Link>
-          </div>
+          </motion.div>
         </section>
-        <LogoTab />
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={scaleIn}
+        >
+          <LogoTab />
+        </motion.div>
       </div>
       <EndingSection />
     </>

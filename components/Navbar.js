@@ -57,26 +57,38 @@ function Navbar() {
   };
 
   useEffect(() => {
-    let lastScrollY = 0;
+    let lastScrollY = window.scrollY; // Initialize with current scroll position
+    let ticking = false;
 
     function handleScroll() {
       const scrollY = window.scrollY;
 
-      // Use `requestAnimationFrame` for better performance
-      requestAnimationFrame(() => {
-        if (scrollY > 100 && lastScrollY <= 100) {
-          setIsSticky(true);
-        } else if (scrollY <= 100 && lastScrollY > 100) {
-          setIsSticky(false);
-        }
-        lastScrollY = scrollY;
-      });
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY; // Get fresh scroll position
+
+          if (currentScrollY > 100 && lastScrollY <= 100) {
+            setIsSticky(true);
+          } else if (currentScrollY <= 100 && lastScrollY > 100) {
+            setIsSticky(false);
+          }
+
+          lastScrollY = currentScrollY; // Update lastScrollY inside RAF
+          ticking = false;
+        });
+        ticking = true;
+      }
     }
 
-    // Add scroll event listener when component mounts
-    window.addEventListener("scroll", handleScroll);
+    // Set initial state based on current scroll position
+    if (window.scrollY > 100) {
+      setIsSticky(true);
+    } else {
+      setIsSticky(false);
+    }
 
-    // Remove scroll event listener when component unmounts
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };

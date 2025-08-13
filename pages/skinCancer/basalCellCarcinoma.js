@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Script from "next/script";
+import { motion } from "framer-motion";
 import Navbar from "../../components/Navbar";
 import TitleRow from "../../components/TitleRow";
 import TextCentered from "../../components/TextCentered";
@@ -8,8 +9,41 @@ import LogoTab from "../../components/Logo-Tab";
 import Logos from "../../components/Logos";
 import Providers from "../../components/Providers";
 import EndingSection from "../../components/EndingSection";
+
 function basalCellCarcinoma() {
   const baseUrl = "https://www.alaskaskincancer.com";
+
+  // Optimized Animation variants (prevent layout shifts)
+  const clinicSectionVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const clinicContentVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
+  const clinicImageVariants = {
+    hidden: { opacity: 0, x: 20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
 
   return (
     <>
@@ -248,9 +282,21 @@ Our practice is experienced in diagnosing and treating BCC using tools such as d
             className="warning-signs-section"
             aria-labelledby="warning-signs-heading"
           >
-            <div className="clinic-section">
-              <div className="clinic-content">
-                <div className="clinic-text">
+            <motion.div
+              className="clinic-section"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={clinicSectionVariants}
+            >
+              <motion.div
+                className="clinic-content"
+                variants={clinicSectionVariants}
+              >
+                <motion.div
+                  className="clinic-text"
+                  variants={clinicContentVariants}
+                >
                   <h2
                     id="warning-signs-heading"
                     className="warning-signs-heading"
@@ -263,29 +309,46 @@ Our practice is experienced in diagnosing and treating BCC using tools such as d
                     BCC include:
                   </p>
                   <ul className="clinic-description">
-                    <li>Open sores that bleed or crust and do not heal.</li>
                     <li>
-                      Pearly or waxy bumps, often with visible blood vessels.
+                      <strong>Pearly, flesh-colored or pink bumps</strong> with
+                      a rolled border
                     </li>
-                    <li>Reddish, irritated patches that may itch or hurt.</li>
-                    <li>Scar-like areas with poorly defined borders.</li>
+                    <li>
+                      <strong>Open sores that bleed, ooze, or crust</strong> and
+                      don't heal
+                    </li>
+                    <li>
+                      <strong>Shiny, translucent patches</strong> that may be
+                      pink, red, or white
+                    </li>
+                    <li>
+                      <strong>Pink or red scaly patches</strong> that may itch
+                      or be tender
+                    </li>
+                    <li>
+                      <strong>Waxy, white or yellow scar-like areas</strong>{" "}
+                      without clear borders
+                    </li>
                   </ul>
                   <p className="clinic-description">
-                    Early diagnosis allows for more conservative treatment and
-                    optimal cosmetic outcomes. Regular skin exams and sun
-                    protection are key to reducing risk and promoting early
-                    detection.
+                    If you notice any of these warning signs or have concerns
+                    about a skin lesion, schedule an evaluation with our
+                    dermatology team promptly.
                   </p>
-                </div>
-                <div className="clinic-image">
+                </motion.div>
+                <motion.div
+                  className="clinic-image"
+                  variants={clinicImageVariants}
+                >
                   <img
                     src="/images/skin-cancer/BasalCell.webp"
-                    alt="Basal cell carcinoma example showing typical appearance and characteristics"
+                    alt="Example of basal cell carcinoma showing characteristic pearly appearance"
                     className="clinic-photo"
+                    loading="lazy"
                   />
-                </div>
-              </div>
-            </div>
+                </motion.div>
+              </motion.div>
+            </motion.div>
           </section>
           <LogoTab />
         </main>

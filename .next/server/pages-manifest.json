@@ -2,8 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/skinCancer/basalCellCarcinoma": "pages/skinCancer/basalCellCarcinoma.js",
-  "/skinCancer/melanoma": "pages/skinCancer/melanoma.js",
-  "/skinCancer/squamosCellCarcinoma": "pages/skinCancer/squamosCellCarcinoma.js"
+  "/404": "pages/404.js",
+  "/about/providers": "pages/about/providers.js",
+  "/contact": "pages/contact.js",
+  "/insurances": "pages/insurances.js"
 }

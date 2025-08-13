@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Script from "next/script";
+import { motion } from "framer-motion";
 import Navbar from "../../components/Navbar";
 import TitleRow from "../../components/TitleRow";
 import TextCentered from "../../components/TextCentered";
@@ -8,8 +9,28 @@ import LogoTab from "../../components/Logo-Tab";
 import Logos from "../../components/Logos";
 import Providers from "../../components/Providers";
 import EndingSection from "../../components/EndingSection";
+
 function providers() {
   const baseUrl = "https://www.alaskaskincancer.com";
+
+  // Optimized Animation variants (prevent layout shifts)
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
+  const scaleIn = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
 
   return (
     <>
@@ -175,7 +196,14 @@ function providers() {
         <Navbar />
         <main>
           <section className="section1" aria-hidden="true"></section>
-          <section className="hero-section" aria-labelledby="hero-heading">
+          <motion.section
+            className="hero-section"
+            aria-labelledby="hero-heading"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={scaleIn}
+          >
             <div className="full-width-photo first-photo with-overlay">
               <img
                 src="/images/AboutTheGroup1.webp"
@@ -192,17 +220,21 @@ function providers() {
                 </h2>
               </div>
             </div>
-          </section>
+          </motion.section>
           <LogoTab />
-          <section
+          <motion.section
             className="providers-showcase"
             aria-labelledby="providers-heading"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeInUp}
           >
             <h2 id="providers-heading" className="sr-only">
               Meet Our Medical Specialists
             </h2>
             <Providers />
-          </section>
+          </motion.section>
           <LogoTab />
         </main>
       </div>

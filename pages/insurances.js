@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Script from "next/script";
+import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import TitleRow from "../components/TitleRow";
 import TextCentered from "../components/TextCentered";
@@ -10,23 +11,44 @@ import EndingSection from "../components/EndingSection";
 function insurances() {
   const baseUrl = "https://www.alaskaskincancer.com";
 
+  // Optimized Animation variants (prevent layout shifts)
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
+  const scaleIn = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
   return (
     <>
       {/* <Preloader /> */}
       <Head>
-        <title>Gallery - Alaska Skin Cancer Specialty Group</title>
+        <title>
+          Insurance Information - Alaska Skin Cancer Specialty Group
+        </title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="View our gallery of before and after photos showcasing successful skin cancer treatments and reconstructions by the Alaska Skin Cancer Specialty Group."
+          content="Learn about insurance coverage and accepted plans for skin cancer treatment at Alaska Skin Cancer Specialty Group. We accept most major insurances."
         />
         <meta
           property="og:title"
-          content="Gallery - Alaska Skin Cancer Specialty Group"
+          content="Insurance Information - Alaska Skin Cancer Specialty Group"
         />
         <meta
           property="og:description"
-          content="View our gallery of before and after photos showcasing successful skin cancer treatments and reconstructions by the Alaska Skin Cancer Specialty Group."
+          content="Learn about insurance coverage and accepted plans for skin cancer treatment at Alaska Skin Cancer Specialty Group. We accept most major insurances."
         />
         <meta
           property="og:image"
@@ -34,7 +56,7 @@ function insurances() {
         />
         <meta
           property="og:url"
-          content="https://www.alaskaskincancer.com/gallery"
+          content="https://www.alaskaskincancer.com/insurances"
         />
         <meta property="og:type" content="website" />
         <meta
@@ -46,11 +68,11 @@ function insurances() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Gallery - Alaska Skin Cancer Specialty Group"
+          content="Insurance Information - Alaska Skin Cancer Specialty Group"
         />
         <meta
           name="twitter:description"
-          content="View our gallery of before and after photos showcasing successful skin cancer treatments and reconstructions by the Alaska Skin Cancer Specialty Group."
+          content="Learn about insurance coverage and accepted plans for skin cancer treatment at Alaska Skin Cancer Specialty Group. We accept most major insurances."
         />
         <meta
           name="twitter:image"
@@ -59,11 +81,11 @@ function insurances() {
 
         <meta
           name="keywords"
-          content="Alaska skin cancer gallery, before after photos, skin cancer treatment results, Mohs surgery results, reconstruction gallery, dermatology Alaska"
+          content="Alaska skin cancer insurance, medical insurance accepted, health insurance coverage, skin cancer treatment insurance, dermatology insurance Alaska, Mohs surgery insurance"
         />
         <meta name="author" content="Alaska Skin Cancer Specialty Group"></meta>
         <link rel="icon" href="/images/favicon.png" />
-        <link rel="canonical" href={`${baseUrl}/gallery`} />
+        <link rel="canonical" href={`${baseUrl}/insurances`} />
       </Head>
 
       {/* Structured Data - Medical Organization */}
@@ -80,7 +102,7 @@ function insurances() {
             image: "https://www.alaskaskincancer.com/images/logo.webp",
             logo: "https://www.alaskaskincancer.com/images/logo.webp",
             description:
-              "View our gallery of before and after photos showcasing successful skin cancer treatments and reconstructions by the Alaska Skin Cancer Specialty Group.",
+              "Learn about insurance coverage and accepted plans for skin cancer treatment at Alaska Skin Cancer Specialty Group. We accept most major insurances.",
             address: {
               "@type": "PostalAddress",
               addressCountry: "US",
@@ -142,8 +164,8 @@ function insurances() {
               {
                 "@type": "ListItem",
                 position: 2,
-                name: "Gallery",
-                item: "https://www.alaskaskincancer.com/gallery",
+                name: "Insurance Information",
+                item: "https://www.alaskaskincancer.com/insurances",
               },
             ],
           }),
@@ -169,22 +191,25 @@ function insurances() {
         <Navbar />
         <main>
           <LogoTab />
-          <section
-            className="gallery-section"
-            aria-labelledby="gallery-heading"
+          <motion.section
+            className="insurance-section"
+            aria-labelledby="insurance-heading"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeInUp}
           >
             <TextCentered
               newPadding={"5px"}
-              title={"Patient Gallery Coming Soon"}
-              description={`We are currently preparing a comprehensive gallery showcasing the exceptional results achieved through our collaborative approach to skin cancer treatment and reconstruction.
+              title={"Insurance Information Coming Soon"}
+              description={`We are currently updating our comprehensive insurance information page to provide you with the most current details about coverage and accepted plans.
 
-Our upcoming gallery will feature before and after photos demonstrating the expertise of our team in Mohs surgery, radiation therapy, and plastic reconstruction. These images will highlight our commitment to achieving both functional restoration and optimal cosmetic outcomes.
+We are committed to making our specialized skin cancer treatments accessible and work with most major insurance providers to ensure you receive the care you need.
 
-Please check back soon to view examples of our work and the life-changing results we help our patients achieve. In the meantime, we invite you to learn more about our providers and treatment options.
-
-For questions about specific procedures or to schedule a consultation, please contact our office directly.`}
+Please check back soon for complete insurance details. In the meantime, we encourage you to contact our office directly to verify your specific insurance coverage and discuss payment options.
+`}
             />
-          </section>
+          </motion.section>
           <LogoTab />
         </main>
       </div>

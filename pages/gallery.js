@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Script from "next/script";
+import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import TitleRow from "../components/TitleRow";
 import TextCentered from "../components/TextCentered";
@@ -9,6 +10,25 @@ import EndingSection from "../components/EndingSection";
 
 function gallery() {
   const baseUrl = "https://www.alaskaskincancer.com";
+
+  // Optimized Animation variants (prevent layout shifts)
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
+  const scaleIn = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
 
   return (
     <>
@@ -169,9 +189,13 @@ function gallery() {
         <Navbar />
         <main>
           <LogoTab />
-          <section
+          <motion.section
             className="gallery-section"
             aria-labelledby="gallery-heading"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeInUp}
           >
             <TextCentered
               newPadding={"5px"}
@@ -184,7 +208,7 @@ Please check back soon to view examples of our work and the life-changing result
 
 For questions about specific procedures or to schedule a consultation, please contact our office directly.`}
             />
-          </section>
+          </motion.section>
           <LogoTab />
         </main>
       </div>

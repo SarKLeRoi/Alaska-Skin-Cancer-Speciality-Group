@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Script from "next/script";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import TitleRow from "../components/TitleRow";
 import TextCentered from "../components/TextCentered";
@@ -10,6 +11,34 @@ import EndingSection from "../components/EndingSection";
 
 function about() {
   const baseUrl = "https://www.alaskaskincancer.com";
+
+  // Optimized Animation variants (prevent layout shifts)
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 }, // Reduced from y: 60
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }, // Faster duration
+    },
+  };
+
+  const scaleIn = {
+    hidden: { opacity: 0, scale: 0.95 }, // Reduced from scale: 0.8
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5, ease: "easeOut" }, // Faster duration
+    },
+  };
+
+  const slideInRight = {
+    hidden: { opacity: 0, x: 60 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
 
   return (
     <>
@@ -174,7 +203,12 @@ function about() {
             <h1 id="hero-heading" className="sr-only">
               About Alaska Skin Cancer Specialty Group
             </h1>
-            <div className="full-width-photo first-photo with-overlay">
+            <motion.div
+              className="full-width-photo first-photo with-overlay"
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+            >
               <img
                 src="/images/AboutTheGroup1.webp"
                 alt="Alaska Skin Cancer Specialty Group team and facilities providing comprehensive skin cancer care"
@@ -187,13 +221,24 @@ function about() {
                   Comprehensive Skin Cancer Care
                 </h2>
               </div> */}
-            </div>
+            </motion.div>
           </section>
 
-          <LogoTab />
-          <section
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={scaleIn}
+          >
+            <LogoTab />
+          </motion.div>
+          <motion.section
             className="about-intro-section"
             aria-labelledby="intro-heading"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeInUp}
           >
             <TextCentered
               newPadding={"5px"}
@@ -202,8 +247,15 @@ function about() {
 
 Explore the sections below to learn more about our team, our clinical locations, and the expert providers dedicated to your care.`}
             />
-          </section>
-          <LogoTab />
+          </motion.section>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={scaleIn}
+          >
+            <LogoTab />
+          </motion.div>
 
           {/* Navigation Menu Section */}
           <section
@@ -213,7 +265,13 @@ Explore the sections below to learn more about our team, our clinical locations,
             <h2 id="nav-heading" className="sr-only">
               Learn More About Our Organization
             </h2>
-            <div className="face-section2">
+            <motion.div
+              className="face-section2"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeInUp}
+            >
               <nav
                 className="container"
                 role="navigation"
@@ -241,11 +299,18 @@ Explore the sections below to learn more about our team, our clinical locations,
                   The Providers
                 </Link>
               </nav>
-            </div>
+            </motion.div>
           </section>
 
           {/* Providers Preview Section */}
-          <LogoTab />
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={scaleIn}
+          >
+            <LogoTab />
+          </motion.div>
         </main>
       </div>
       <EndingSection />

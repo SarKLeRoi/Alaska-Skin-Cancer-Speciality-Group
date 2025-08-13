@@ -238,7 +238,7 @@ At our practice, we understand that a skin cancer diagnosis can be overwhelming.
             <div className="clinic-section">
               <div className="clinic-content">
                 <div className="clinic-text">
-                  <h2 id="procedure-details-heading">
+                  <h2 id="procedure-details-heading" className="clinic-title">
                     What to Expect During Mohs Surgery
                   </h2>
                   <p className="clinic-description">

@@ -1,13 +1,60 @@
 import React from "react";
 import Head from "next/head";
 import Script from "next/script";
+import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import TitleRow from "../components/TitleRow";
-import TextCentered from "../components/TextCentered";
 import LogoTab from "../components/Logo-Tab";
 import EndingSection from "../components/EndingSection";
+
 function group() {
   const baseUrl = "https://www.alaskaskincancer.com";
+
+  // Animation variants
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
+  const staggerContainer = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const slideInLeft = {
+    hidden: { opacity: 0, x: -30 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
+  const slideInRight = {
+    hidden: { opacity: 0, x: 30 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
+  const scaleIn = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
 
   return (
     <>
@@ -139,7 +186,12 @@ function group() {
         <Navbar />
         <section className="section1"></section>
 
-        <div className="full-width-photo first-photo with-overlay">
+        <motion.div
+          className="full-width-photo first-photo with-overlay"
+          initial={{ opacity: 0, scale: 1.1 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+        >
           <img
             src="/images/contact.jpg"
             alt="Alaska Skin Cancer Specialty Group"
@@ -150,18 +202,37 @@ function group() {
           <div className="image-overlay-subtitle">
             <h3 className="overlay-subtitle black-subtitle">Contact Us</h3>
           </div>
-        </div>
-        <LogoTab />
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={scaleIn}
+        >
+          <LogoTab />
+        </motion.div>
 
         {/* Contact Information Section */}
-        <div className="contact-section">
-          <div className="contact-container">
+        <motion.div
+          className="contact-section"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={fadeInUp}
+        >
+          <motion.div
+            className="contact-container"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={staggerContainer}
+          >
             {/* Capstone Dermatology */}
-            <div className="clinic-contact-card">
+            <motion.div className="clinic-contact-card" variants={slideInLeft}>
               <h2 className="clinic-name">Capstone Dermatology</h2>
 
               {/* Anchorage Location */}
-              <div className="location-card">
+              <motion.div className="location-card" variants={fadeInUp}>
                 <div className="location-info">
                   <h3 className="location-name">Anchorage</h3>
                   <div className="contact-details">
@@ -187,10 +258,10 @@ function group() {
                     title="Capstone Dermatology Anchorage"
                   ></iframe>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Wasilla Location */}
-              <div className="location-card">
+              <motion.div className="location-card" variants={fadeInUp}>
                 <div className="location-info">
                   <h3 className="location-name">Wasilla</h3>
                   <div className="contact-details">
@@ -216,15 +287,15 @@ function group() {
                     title="Capstone Dermatology Wasilla"
                   ></iframe>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
             {/* Matsu Plastic Surgery */}
-            <div className="clinic-contact-card">
+            <motion.div className="clinic-contact-card" variants={slideInRight}>
               <h2 className="clinic-name">Matsu Plastic Surgery</h2>
 
               {/* Palmer Location */}
-              <div className="location-card">
+              <motion.div className="location-card" variants={fadeInUp}>
                 <div className="location-info">
                   <h3 className="location-name">Palmer</h3>
                   <div className="contact-details">
@@ -250,10 +321,10 @@ function group() {
                     title="Matsu Plastic Surgery Palmer"
                   ></iframe>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
       </div>
       <LogoTab />
       <EndingSection />

@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Script from "next/script";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import TitleRow from "../components/TitleRow";
 import TextCentered from "../components/TextCentered";
@@ -10,6 +11,34 @@ import EndingSection from "../components/EndingSection";
 
 export default function Custom404() {
   const baseUrl = "https://www.alaskaskincancer.com";
+
+  // Optimized Animation variants (prevent layout shifts)
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
+  const scaleIn = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
+  const staggerContainer = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
 
   return (
     <>
@@ -144,7 +173,7 @@ export default function Custom404() {
 
           <section className="error-content" aria-labelledby="error-message">
             <TextCentered
-              headingLevel={3}
+              headingLevel={1}
               title={"Oops! This Page Doesn't Exist"}
               description={`The page you're looking for might have been moved, renamed, or no longer exists. But don't worry – we're here to help you find the information you need about skin cancer treatment and our expert medical services.
 

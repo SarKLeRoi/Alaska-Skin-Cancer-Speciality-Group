@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Script from "next/script";
+import { motion } from "framer-motion";
 import Navbar from "../../components/Navbar";
 import TitleRow from "../../components/TitleRow";
 import TextCentered from "../../components/TextCentered";
@@ -8,8 +9,41 @@ import LogoTab from "../../components/Logo-Tab";
 import Logos from "../../components/Logos";
 import Providers from "../../components/Providers";
 import EndingSection from "../../components/EndingSection";
+
 function squamousCellCarcinoma() {
   const baseUrl = "https://www.alaskaskincancer.com";
+
+  // Optimized Animation variants (prevent layout shifts)
+  const clinicSectionVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const clinicContentVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
+  const clinicImageVariants = {
+    hidden: { opacity: 0, x: 20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
 
   return (
     <>
@@ -244,9 +278,21 @@ We are committed to identifying SCC early using clinical evaluation, dermoscopy,
             className="warning-signs-section"
             aria-labelledby="warning-signs-heading"
           >
-            <div className="clinic-section">
-              <div className="clinic-content">
-                <div className="clinic-text">
+            <motion.div
+              className="clinic-section"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={clinicSectionVariants}
+            >
+              <motion.div
+                className="clinic-content"
+                variants={clinicSectionVariants}
+              >
+                <motion.div
+                  className="clinic-text"
+                  variants={clinicContentVariants}
+                >
                   <h2
                     id="warning-signs-heading"
                     className="warning-signs-heading"
@@ -274,16 +320,19 @@ We are committed to identifying SCC early using clinical evaluation, dermoscopy,
                     these signs, timely evaluation by a dermatologist is
                     essential.
                   </p>
-                </div>
-                <div className="clinic-image">
+                </motion.div>
+                <motion.div
+                  className="clinic-image"
+                  variants={clinicImageVariants}
+                >
                   <img
                     src="/images/skin-cancer/SquamousCell.webp"
                     alt="Squamous cell carcinoma example showing typical appearance and characteristics"
                     className="clinic-photo"
                   />
-                </div>
-              </div>
-            </div>
+                </motion.div>
+              </motion.div>
+            </motion.div>
           </section>
           <LogoTab />
         </main>

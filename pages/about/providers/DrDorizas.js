@@ -2,9 +2,20 @@
 import React from "react";
 import Head from "next/head";
 import Script from "next/script";
+import { motion } from "framer-motion";
 import DoctorBio from "../../../components/DoctorBio";
 
 const DrDorizas = () => {
+  // Optimized Animation variants (prevent layout shifts)
+  const pageVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   const doctor = {
     name: "Dr. Andrew S. Dorizas, MD, FAAD, ACMS",
     title: "Double Board-Certified Dermatologist and Mohs Surgeon",
@@ -280,9 +291,9 @@ const DrDorizas = () => {
         `}
       </Script>
 
-      <main>
+      <motion.main initial="hidden" animate="visible" variants={pageVariants}>
         <DoctorBio doctor={doctor} />
-      </main>
+      </motion.main>
     </>
   );
 };

@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.2.1",
     "accessibility": "^6.1.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
+    "framer-motion": "^12.23.12",
     "next": "^15.1.7",
     "react": "^19.0.0",
     "react-axe": "^3.5.4",

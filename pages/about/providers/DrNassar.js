@@ -2,9 +2,20 @@
 import React from "react";
 import Head from "next/head";
 import Script from "next/script";
+import { motion } from "framer-motion";
 import DoctorBio from "../../../components/DoctorBio";
 
 const DrNassar = () => {
+  // Optimized Animation variants (prevent layout shifts)
+  const pageVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   const doctor = {
     name: "Dr. Amer H. Nassar, M.D.",
     title: "Double Board-Certified Plastic and Reconstructive Surgeon",
@@ -221,9 +232,9 @@ const DrNassar = () => {
         `}
       </Script>
 
-      <main>
+      <motion.main initial="hidden" animate="visible" variants={pageVariants}>
         <DoctorBio doctor={doctor} />
-      </main>
+      </motion.main>
     </>
   );
 };

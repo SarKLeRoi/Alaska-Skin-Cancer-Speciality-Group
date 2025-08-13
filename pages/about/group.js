@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Script from "next/script";
+import { motion } from "framer-motion";
 import Navbar from "../../components/Navbar";
 import TitleRow from "../../components/TitleRow";
 import TextCentered from "../../components/TextCentered";
@@ -8,8 +9,37 @@ import LogoTab from "../../components/Logo-Tab";
 import Logos from "../../components/Logos";
 import Providers from "../../components/Providers";
 import EndingSection from "../../components/EndingSection";
+
 function group() {
   const baseUrl = "https://www.alaskaskincancer.com";
+
+  // Optimized Animation variants (prevent layout shifts)
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
+  const scaleIn = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
+  const staggerContainer = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
 
   return (
     <>
@@ -174,7 +204,14 @@ function group() {
         <TitleRow />
         <Navbar />
         <main>
-          <section className="hero-section" aria-labelledby="hero-heading">
+          <motion.section
+            className="hero-section"
+            aria-labelledby="hero-heading"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={scaleIn}
+          >
             <div className="full-width-photo first-photo with-overlay">
               <img
                 src="/images/AboutTheGroup1.webp"
@@ -191,10 +228,17 @@ function group() {
                 </h2>
               </div>
             </div>
-          </section>
+          </motion.section>
 
           <LogoTab />
-          <section className="intro-section" aria-labelledby="intro-heading">
+          <motion.section
+            className="intro-section"
+            aria-labelledby="intro-heading"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeInUp}
+          >
             <TextCentered
               newPadding={"5px"}
               title={"Alaska Skin Cancer Specialty Group"}
@@ -202,12 +246,16 @@ function group() {
 
 The Group's mission is to provide compassionate, patient-centered care, ensuring each individual understands their options and feels supported every step of the way. Whether you require a skin cancer screening, a specialized surgical procedure, or a comprehensive reconstruction plan, the Alaska Skin Cancer Specialty Group is committed to helping you achieve optimal outcomes. Their collaborative approach ensures that every patient receives timely, targeted, and effective treatment.`}
             />
-          </section>
+          </motion.section>
           <LogoTab />
           {/* Second Photo - Full Width */}
-          <section
+          <motion.section
             className="overview-section"
             aria-labelledby="overview-heading"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={scaleIn}
           >
             <h2 id="overview-heading" className="sr-only">
               Our Collaborative Medical Team
@@ -218,20 +266,31 @@ The Group's mission is to provide compassionate, patient-centered care, ensuring
                 alt="Alaska Skin Cancer Specialty Group collaborative team and advanced medical facilities"
               />
             </div>
-          </section>
+          </motion.section>
           <LogoTab />
-          <section
+          <motion.section
             className="certifications-section"
             aria-labelledby="certifications-heading"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeInUp}
           >
             <h2 id="certifications-heading" className="sr-only">
               Professional Certifications and Associations
             </h2>
             <Logos />
-          </section>
+          </motion.section>
         </main>
       </div>
-      <Providers />
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={fadeInUp}
+      >
+        <Providers />
+      </motion.div>
       <LogoTab />
       <EndingSection />
     </>

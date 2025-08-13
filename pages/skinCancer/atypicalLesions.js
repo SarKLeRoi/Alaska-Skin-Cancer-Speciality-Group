@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Script from "next/script";
+import { motion } from "framer-motion";
 import Navbar from "../../components/Navbar";
 import TitleRow from "../../components/TitleRow";
 import TextCentered from "../../components/TextCentered";
@@ -8,8 +9,28 @@ import LogoTab from "../../components/Logo-Tab";
 import Logos from "../../components/Logos";
 import Providers from "../../components/Providers";
 import EndingSection from "../../components/EndingSection";
+
 function atypicalLesions() {
   const baseUrl = "https://www.alaskaskincancer.com";
+
+  // Optimized Animation variants (prevent layout shifts)
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
+  const scaleIn = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
 
   return (
     <>
@@ -202,7 +223,14 @@ function atypicalLesions() {
         <TitleRow />
         <Navbar />
         <main>
-          <section className="hero-section" aria-labelledby="hero-heading">
+          <motion.section
+            className="hero-section"
+            aria-labelledby="hero-heading"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={scaleIn}
+          >
             <div className="full-width-photo first-photo with-overlay">
               <img
                 src="/images/skin-cancer/4.webp"
@@ -217,12 +245,16 @@ function atypicalLesions() {
                 </h2>
               </div> */}
             </div>
-          </section>
+          </motion.section>
 
           <LogoTab />
-          <section
+          <motion.section
             className="content-section"
             aria-labelledby="content-heading"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeInUp}
           >
             <TextCentered
               newPadding={"5px"}
@@ -231,7 +263,7 @@ function atypicalLesions() {
 
 Mohs surgery is the preferred treatment for these lesions when they occur in cosmetically or functionally sensitive areas, such as the face, ears, or hands, as it maximizes tissue preservation while ensuring complete removal. Our practice prioritizes precision, utilizing state-of-the-art techniques to deliver the highest level of care for patients with complex or high-risk skin conditions.`}
             />
-          </section>
+          </motion.section>
           <LogoTab />
         </main>
       </div>

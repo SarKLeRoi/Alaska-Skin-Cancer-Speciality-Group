@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { motion } from "framer-motion";
 
 function TextCentered({
   title,
@@ -14,8 +15,31 @@ function TextCentered({
 }) {
   const HeadingTag = `h${headingLevel}`;
 
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 15 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
   return (
-    <section
+    <motion.section
       className={`about-section2 ${
         useResponsiveBgSize ? "about-section2-responsive" : ""
       }`}
@@ -28,8 +52,12 @@ function TextCentered({
       aria-label={
         bgDesktop ? "Content section with background image" : undefined
       }
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={containerVariants}
     >
-      <div
+      <motion.div
         className="text-content"
         style={{
           margin: newMargin,
@@ -38,30 +66,34 @@ function TextCentered({
             ? { backgroundColor: contentBackgroundColor }
             : {}),
         }}
+        variants={itemVariants}
       >
         {title && (
-          <HeadingTag
-            id="text-centered-heading"
-            className="text-centered-title"
-            style={{ whiteSpace: "pre-line" }}
-          >
-            {title}
-          </HeadingTag>
+          <motion.div variants={itemVariants}>
+            <HeadingTag
+              id="text-centered-heading"
+              className="text-centered-title"
+              style={{ whiteSpace: "pre-line" }}
+            >
+              {title}
+            </HeadingTag>
+          </motion.div>
         )}
         {description && (
-          <p
+          <motion.p
             style={{
               whiteSpace: "pre-line",
               ...(pBackgroundColor
                 ? { backgroundColor: pBackgroundColor }
                 : {}),
             }}
+            variants={itemVariants}
           >
             {description}
-          </p>
+          </motion.p>
         )}
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }
 

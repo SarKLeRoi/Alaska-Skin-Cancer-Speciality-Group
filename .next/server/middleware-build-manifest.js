@@ -10,6 +10,11 @@ self.__BUILD_MANIFEST = {
   "rootMainFiles": [],
   "rootMainFilesTree": {},
   "pages": {
+    "/404": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/404.js"
+    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -20,20 +25,15 @@ self.__BUILD_MANIFEST = {
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/skinCancer/basalCellCarcinoma": [
+    "/about/providers": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/skinCancer/basalCellCarcinoma.js"
+      "static/chunks/pages/about/providers.js"
     ],
-    "/skinCancer/melanoma": [
+    "/contact": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/skinCancer/melanoma.js"
-    ],
-    "/skinCancer/squamosCellCarcinoma": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/skinCancer/squamosCellCarcinoma.js"
+      "static/chunks/pages/contact.js"
     ]
   },
   "ampFirstPages": []

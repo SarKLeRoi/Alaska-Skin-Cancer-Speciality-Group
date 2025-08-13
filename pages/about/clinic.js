@@ -1,13 +1,65 @@
 import React from "react";
 import Head from "next/head";
 import Script from "next/script";
+import { motion } from "framer-motion";
 import Navbar from "../../components/Navbar";
 import TitleRow from "../../components/TitleRow";
 import TextCentered from "../../components/TextCentered";
 import LogoTab from "../../components/Logo-Tab";
 import EndingSection from "../../components/EndingSection";
+
 function clinic() {
   const baseUrl = "https://www.alaskaskincancer.com";
+
+  // Optimized Animation variants (prevent layout shifts)
+  const clinicSectionVariants = {
+    hidden: { opacity: 0, y: 20 }, // Reduced from y: 60
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6, // Reduced from 0.8
+        ease: "easeOut",
+        staggerChildren: 0.15, // Reduced from 0.2
+      },
+    },
+  };
+
+  const clinicContentVariants = {
+    hidden: { opacity: 0, x: -20 }, // Reduced from x: -40
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5, ease: "easeOut" }, // Reduced duration
+    },
+  };
+
+  const clinicImageVariants = {
+    hidden: { opacity: 0, x: 20 }, // Reduced from x: 40
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5, ease: "easeOut" }, // Reduced duration
+    },
+  };
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
+  const scaleIn = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
 
   return (
     <>
@@ -172,9 +224,21 @@ function clinic() {
         <TitleRow />
         <Navbar />
         <main>
-          <section className="section1"></section>
+          <motion.section
+            className="section1"
+            initial="hidden"
+            animate="visible"
+            variants={fadeInUp}
+          ></motion.section>
 
-          <section className="hero-section" aria-labelledby="hero-heading">
+          <motion.section
+            className="hero-section"
+            aria-labelledby="hero-heading"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={scaleIn}
+          >
             <div className="full-width-photo first-photo with-overlay">
               <img
                 src="/images/AboutTheGroup1.webp"
@@ -191,9 +255,16 @@ function clinic() {
                 </h2>
               </div>
             </div>
-          </section>
+          </motion.section>
           <LogoTab />
-          <section className="intro-section" aria-labelledby="intro-heading">
+          <motion.section
+            className="intro-section"
+            aria-labelledby="intro-heading"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeInUp}
+          >
             <TextCentered
               newPadding={"5px"}
               title={"Alaska Skin Cancer Specialty Group"}
@@ -202,12 +273,16 @@ function clinic() {
 
 Although the participating clinics function independently, they collaborate in a synergistic manner to offer patients an A-Z approach to skin cancer treatment, including routine skin surveillance, biopsies, topical treatments, surgical treatments with reconstruction, and radiation therapy.`}
             />
-          </section>
+          </motion.section>
           <LogoTab />
           {/* Second Photo - Full Width */}
-          <section
+          <motion.section
             className="overview-section"
             aria-labelledby="overview-heading"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={scaleIn}
           >
             <h2 id="overview-heading" className="sr-only">
               Our Clinic Facilities
@@ -218,16 +293,26 @@ Although the participating clinics function independently, they collaborate in a
                 alt="Alaska Skin Cancer Specialty Group clinic facilities and team collaboration"
               />
             </div>
-          </section>
+          </motion.section>
           <LogoTab />
 
           {/* Capstone Dermatology Section */}
-          <section
+          <motion.section
             className="clinic-section"
             aria-labelledby="capstone-heading"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={clinicSectionVariants}
           >
-            <div className="clinic-content">
-              <div className="clinic-text">
+            <motion.div
+              className="clinic-content"
+              variants={clinicSectionVariants}
+            >
+              <motion.div
+                className="clinic-text"
+                variants={clinicContentVariants}
+              >
                 <h2 id="capstone-heading" className="clinic-title">
                   Capstone Dermatology
                 </h2>
@@ -256,22 +341,38 @@ Although the participating clinics function independently, they collaborate in a
                     <strong>Hours:</strong> Monday-Friday 7:30am - 5:30pm
                   </p>
                 </div>
-              </div>
-              <div className="clinic-image">
+              </motion.div>
+              <motion.div
+                className="clinic-image"
+                variants={clinicImageVariants}
+              >
                 <img
                   src="/images/about-the-clinc/CapstoneClinic.webp"
                   alt="Capstone Dermatology Building in Wasilla, Alaska - specialized skin cancer treatment facility"
                   className="clinic-photo"
                 />
-              </div>
-            </div>
-          </section>
+              </motion.div>
+            </motion.div>
+          </motion.section>
 
           <LogoTab />
           {/* Matsu Plastic Surgery Section */}
-          <section className="clinic-section" aria-labelledby="matsu-heading">
-            <div className="clinic-content">
-              <div className="clinic-text">
+          <motion.section
+            className="clinic-section"
+            aria-labelledby="matsu-heading"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={clinicSectionVariants}
+          >
+            <motion.div
+              className="clinic-content"
+              variants={clinicSectionVariants}
+            >
+              <motion.div
+                className="clinic-text"
+                variants={clinicContentVariants}
+              >
                 <h2 id="matsu-heading" className="clinic-title">
                   Matsu Plastic Surgery
                 </h2>
@@ -301,16 +402,19 @@ Although the participating clinics function independently, they collaborate in a
                     <strong>Hours:</strong> Monday-Friday 8:00am - 7:30pm
                   </p>
                 </div>
-              </div>
-              <div className="clinic-image">
+              </motion.div>
+              <motion.div
+                className="clinic-image"
+                variants={clinicImageVariants}
+              >
                 <img
                   src="/images/about-the-clinc/MatsuPlasticSurgery.webp"
                   alt="Matsu Regional Medical Center in Palmer, Alaska - plastic and reconstructive surgery facility"
                   className="clinic-photo"
                 />
-              </div>
-            </div>
-          </section>
+              </motion.div>
+            </motion.div>
+          </motion.section>
         </main>
       </div>
       <LogoTab />

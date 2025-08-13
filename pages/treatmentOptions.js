@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Script from "next/script";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import TitleRow from "../components/TitleRow";
 import TextCentered from "../components/TextCentered";
@@ -10,6 +11,34 @@ import EndingSection from "../components/EndingSection";
 
 function treatmentOptions() {
   const baseUrl = "https://www.alaskaskincancer.com";
+
+  // Optimized Animation variants (prevent layout shifts)
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 }, // Reduced from y: 60
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }, // Faster duration
+    },
+  };
+
+  const scaleIn = {
+    hidden: { opacity: 0, scale: 0.95 }, // Reduced from scale: 0.8
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5, ease: "easeOut" }, // Faster duration
+    },
+  };
+
+  const slideInRight = {
+    hidden: { opacity: 0, x: 30 }, // Reduced from x: 60
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
 
   return (
     <>
@@ -116,7 +145,7 @@ function treatmentOptions() {
               },
               {
                 "@type": "MedicalProcedure",
-                name: "Plastic Reconstruction",
+                name: "Mohs Reconstruction",
               },
             ],
           }),
@@ -170,7 +199,12 @@ function treatmentOptions() {
         <main>
           {/* Hero Section */}
           <section className="hero-section" aria-labelledby="hero-heading">
-            <div className="full-width-photo first-photo with-overlay">
+            <motion.div
+              className="full-width-photo first-photo with-overlay"
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+            >
               <img
                 src="/images/skin-cancer/2.webp"
                 alt="Comprehensive treatment options for skin cancer - advanced surgical and non-surgical therapies"
@@ -183,13 +217,24 @@ function treatmentOptions() {
                   Advanced Care & Reconstruction
                 </h2>
               </div> */}
-            </div>
+            </motion.div>
           </section>
 
-          <LogoTab />
-          <section
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={scaleIn}
+          >
+            <LogoTab />
+          </motion.div>
+          <motion.section
             className="content-section"
             aria-labelledby="content-heading"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={slideInRight}
           >
             <TextCentered
               newPadding={"5px"}
@@ -198,9 +243,16 @@ function treatmentOptions() {
 
 Explore our treatment options below to learn about the advanced techniques and personalized care we provide to achieve the best possible results for every patient.`}
             />
-          </section>
+          </motion.section>
 
-          <LogoTab />
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={scaleIn}
+          >
+            <LogoTab />
+          </motion.div>
           {/* Navigation Menu Section */}
           <section
             className="navigation-section"
@@ -209,7 +261,13 @@ Explore our treatment options below to learn about the advanced techniques and p
             <h2 id="navigation-heading" className="sr-only">
               Treatment Options
             </h2>
-            <div className="face-section2">
+            <motion.div
+              className="face-section2"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeInUp}
+            >
               <div className="container">
                 <Link
                   href="/treatmentOptions/MohsMicrographicSurgery"
@@ -227,13 +285,20 @@ Explore our treatment options below to learn about the advanced techniques and p
                   href="/treatmentOptions/MohsReconstruction"
                   className="menu-item"
                 >
-                  Plastic Reconstruction
+                  Mohs Reconstruction
                 </Link>
               </div>
-            </div>
+            </motion.div>
           </section>
 
-          <LogoTab />
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={scaleIn}
+          >
+            <LogoTab />
+          </motion.div>
         </main>
       </div>
       <EndingSection />
