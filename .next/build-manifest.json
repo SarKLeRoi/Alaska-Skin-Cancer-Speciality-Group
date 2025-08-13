@@ -1,42 +1,252 @@
 {
   "polyfillFiles": [
-    "static/chunks/polyfills.js"
+    "static/chunks/polyfills-42372ed130431b0a.js"
   ],
-  "devFiles": [
-    "static/chunks/react-refresh.js"
-  ],
+  "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/development/_buildManifest.js",
-    "static/development/_ssgManifest.js"
+    "static/iFi0z5Qf42sWY75SWeL7J/_buildManifest.js",
+    "static/iFi0z5Qf42sWY75SWeL7J/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "rootMainFilesTree": {},
   "pages": {
+    "/": [
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/index-e7b86b3a66b491e9.js"
+    ],
     "/404": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/404.js"
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/404-3c4d5165a4aebf8a.js"
     ],
     "/_app": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/_app.js"
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/css/0b05a2403372d469.css",
+      "static/chunks/pages/_app-8fc0184bc69e76a4.js"
     ],
     "/_error": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/_error.js"
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/pages/_error-fde50cb7f1ab27e0.js"
+    ],
+    "/about": [
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/about-49a139135da0c412.js"
+    ],
+    "/about/clinic": [
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/about/clinic-f1c4f12bc5fb99d2.js"
+    ],
+    "/about/group": [
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/about/group-d018f5b230d1764b.js"
+    ],
+    "/about/providers": [
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/about/providers-f03c550c3e44706a.js"
+    ],
+    "/about/providers/DrDorizas": [
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/about/providers/DrDorizas-e118383cb703a0e9.js"
+    ],
+    "/about/providers/DrGaller": [
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/about/providers/DrGaller-ebbfec22e81fcc6d.js"
+    ],
+    "/about/providers/DrNassar": [
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/about/providers/DrNassar-02802eb1a7ef4d55.js"
     ],
     "/blog": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/blog.js"
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/blog-cb5f5ecbbc07d79b.js"
     ],
     "/blog2": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/blog2.js"
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/blog2-cef962fec7c86036.js"
+    ],
+    "/contact": [
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/contact-ab3c1ca73958b43c.js"
+    ],
+    "/gallery": [
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/gallery-f24a8d2cea09151c.js"
+    ],
+    "/insurances": [
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/insurances-c8f24b7399bea15c.js"
+    ],
+    "/legal/accessbilityStatement": [
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/legal/accessbilityStatement-f1e88005daa05821.js"
+    ],
+    "/legal/hipaaNotice": [
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/legal/hipaaNotice-695a5500a0206f23.js"
+    ],
+    "/legal/medicalDisclaimer": [
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/legal/medicalDisclaimer-28f9c1964de8668d.js"
+    ],
+    "/legal/privacyPolicy": [
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/legal/privacyPolicy-f294db4c29b7e8be.js"
+    ],
+    "/legal/termsOfUse": [
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/legal/termsOfUse-d0f1ae60611b30bd.js"
+    ],
+    "/skinCancer": [
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/skinCancer-9ab26370ff1721bd.js"
+    ],
+    "/skinCancer/atypicalLesions": [
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/skinCancer/atypicalLesions-230cf1b48bf8057f.js"
+    ],
+    "/skinCancer/basalCellCarcinoma": [
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/skinCancer/basalCellCarcinoma-69a0c33c43867c58.js"
+    ],
+    "/skinCancer/melanoma": [
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/skinCancer/melanoma-dbeadf94ce3ea247.js"
+    ],
+    "/skinCancer/squamosCellCarcinoma": [
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/skinCancer/squamosCellCarcinoma-1a398178e8c27122.js"
+    ],
+    "/treatmentOptions": [
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/treatmentOptions-f0d29261393f33ff.js"
+    ],
+    "/treatmentOptions/MohsMicrographicSurgery": [
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/treatmentOptions/MohsMicrographicSurgery-08e46b513bcdaa40.js"
+    ],
+    "/treatmentOptions/MohsReconstruction": [
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/treatmentOptions/MohsReconstruction-8151760c5db350b4.js"
+    ],
+    "/treatmentOptions/radiationTherapy": [
+      "static/chunks/webpack-8cac0b4b405cede1.js",
+      "static/chunks/framework-a4ddb9b21624b39b.js",
+      "static/chunks/main-1b82f937bff51896.js",
+      "static/chunks/667-161e22cd87730e18.js",
+      "static/chunks/200-a84557b4d8d3cd8f.js",
+      "static/chunks/pages/treatmentOptions/radiationTherapy-9aaeadb4ee64be51.js"
     ]
   },
   "ampFirstPages": []

@@ -73,8 +73,8 @@ export default function Blog() {
               Skin cancer is the most common form of cancer in the United
               States, affecting millions of people each year. Despite its
               prevalence, many cases of skin cancer can be prevented with proper
-              awareness and proactive measures. In this blog post, we'll explore
-              the types of skin cancer, prevention strategies, and the
+              awareness and proactive measures. In this blog post, we&apos;ll
+              explore the types of skin cancer, prevention strategies, and the
               importance of early detection.
             </p>
             <h2>Types of Skin Cancer</h2>
@@ -89,8 +89,8 @@ export default function Blog() {
               <li>
                 <strong>Squamous Cell Carcinoma (SCC)</strong>: SCC originates
                 in the squamous cells and often appears as a red, scaly patch or
-                a sore that doesn't heal. It can spread to other parts of the
-                body if not treated promptly.
+                a sore that doesn&apos;t heal. It can spread to other parts of
+                the body if not treated promptly.
               </li>
               <li>
                 <strong>Melanoma</strong>: Although less common, melanoma is the

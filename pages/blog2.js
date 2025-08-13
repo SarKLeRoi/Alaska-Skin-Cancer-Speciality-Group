@@ -72,16 +72,16 @@ export default function Blog2() {
               Our skin is the largest organ of the body and serves as the first
               line of defense against environmental factors. Despite its
               importance, many people overlook the need for regular skin
-              check-ups. In this blog post, we'll explore why routine skin
+              check-ups. In this blog post, we&apos;ll explore why routine skin
               examinations are crucial and how they can help maintain your
-              skin's health.
+              skin&apos;s health.
             </p>
             <h2>Why Regular Skin Check-Ups Matter</h2>
             <ul>
               <li>
                 <strong>Early Detection of Skin Cancer</strong>: Regular
                 check-ups can help detect skin cancer at an early stage when
-                it's most treatable. Dermatologists can identify suspicious
+                it&apos;s most treatable. Dermatologists can identify suspicious
                 moles or lesions that may require further examination.
               </li>
               <li>
@@ -112,17 +112,18 @@ export default function Blog2() {
             <h2>How Often Should You Have a Skin Check-Up?</h2>
             <p>
               The frequency of skin check-ups depends on your individual risk
-              factors. Generally, it's recommended to have a skin examination at
-              least once a year. However, if you have a history of skin cancer
-              or other risk factors, more frequent visits may be necessary.
+              factors. Generally, it&apos;s recommended to have a skin
+              examination at least once a year. However, if you have a history
+              of skin cancer or other risk factors, more frequent visits may be
+              necessary.
             </p>
             <h2>Conclusion</h2>
             <p>
               Regular skin check-ups are an essential part of maintaining your
               overall health. By staying proactive and visiting a dermatologist
               regularly, you can catch potential issues early and keep your skin
-              healthy and vibrant. Remember, your skin is your body's largest
-              organ—take care of it!
+              healthy and vibrant. Remember, your skin is your body&apos;s
+              largest organ—take care of it!
             </p>
           </article>
         </motion.section>
