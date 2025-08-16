@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/iFi0z5Qf42sWY75SWeL7J/_buildManifest.js",
-    "static/iFi0z5Qf42sWY75SWeL7J/_ssgManifest.js"
+    "static/-kqmYVIzONgiIaQUE-gcv/_buildManifest.js",
+    "static/-kqmYVIzONgiIaQUE-gcv/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "rootMainFilesTree": {},
@@ -96,21 +96,21 @@
       "static/chunks/200-a84557b4d8d3cd8f.js",
       "static/chunks/pages/about/providers/DrNassar-02802eb1a7ef4d55.js"
     ],
-    "/blog": [
+    "/blogs/The-Importance-of-Regular-Skin-Check-Ups": [
       "static/chunks/webpack-8cac0b4b405cede1.js",
       "static/chunks/framework-a4ddb9b21624b39b.js",
       "static/chunks/main-1b82f937bff51896.js",
       "static/chunks/667-161e22cd87730e18.js",
       "static/chunks/200-a84557b4d8d3cd8f.js",
-      "static/chunks/pages/blog-cb5f5ecbbc07d79b.js"
+      "static/chunks/pages/blogs/The-Importance-of-Regular-Skin-Check-Ups-7f501a6427b80914.js"
     ],
-    "/blog2": [
+    "/blogs/Understanding-Skin-Cancer:-Prevention-and-Early-Detection": [
       "static/chunks/webpack-8cac0b4b405cede1.js",
       "static/chunks/framework-a4ddb9b21624b39b.js",
       "static/chunks/main-1b82f937bff51896.js",
       "static/chunks/667-161e22cd87730e18.js",
       "static/chunks/200-a84557b4d8d3cd8f.js",
-      "static/chunks/pages/blog2-cef962fec7c86036.js"
+      "static/chunks/pages/blogs/Understanding-Skin-Cancer:-Prevention-and-Early-Detection-5701250597982ca8.js"
     ],
     "/contact": [
       "static/chunks/webpack-8cac0b4b405cede1.js",
@@ -190,7 +190,7 @@
       "static/chunks/main-1b82f937bff51896.js",
       "static/chunks/667-161e22cd87730e18.js",
       "static/chunks/200-a84557b4d8d3cd8f.js",
-      "static/chunks/pages/skinCancer/atypicalLesions-230cf1b48bf8057f.js"
+      "static/chunks/pages/skinCancer/atypicalLesions-69bc997c5be45d85.js"
     ],
     "/skinCancer/basalCellCarcinoma": [
       "static/chunks/webpack-8cac0b4b405cede1.js",
@@ -206,7 +206,7 @@
       "static/chunks/main-1b82f937bff51896.js",
       "static/chunks/667-161e22cd87730e18.js",
       "static/chunks/200-a84557b4d8d3cd8f.js",
-      "static/chunks/pages/skinCancer/melanoma-dbeadf94ce3ea247.js"
+      "static/chunks/pages/skinCancer/melanoma-c3acacc0d55b7109.js"
     ],
     "/skinCancer/squamosCellCarcinoma": [
       "static/chunks/webpack-8cac0b4b405cede1.js",
@@ -214,7 +214,7 @@
       "static/chunks/main-1b82f937bff51896.js",
       "static/chunks/667-161e22cd87730e18.js",
       "static/chunks/200-a84557b4d8d3cd8f.js",
-      "static/chunks/pages/skinCancer/squamosCellCarcinoma-1a398178e8c27122.js"
+      "static/chunks/pages/skinCancer/squamosCellCarcinoma-356a6e9ad67a21fe.js"
     ],
     "/treatmentOptions": [
       "static/chunks/webpack-8cac0b4b405cede1.js",

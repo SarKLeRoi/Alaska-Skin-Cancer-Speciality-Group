@@ -1,9 +1,9 @@
 import React from "react";
 import Head from "next/head";
-import Navbar from "../components/Navbar";
-import EndingSection from "../components/EndingSection";
-import TitleRow from "../components/TitleRow";
-import LogoTab from "../components/Logo-Tab";
+import Navbar from "../../components/Navbar";
+import EndingSection from "../../components/EndingSection";
+import TitleRow from "../../components/TitleRow";
+import LogoTab from "../../components/Logo-Tab";
 import { motion } from "framer-motion";
 
 export default function Blog() {

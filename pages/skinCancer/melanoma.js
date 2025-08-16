@@ -6,8 +6,6 @@ import Navbar from "../../components/Navbar";
 import TitleRow from "../../components/TitleRow";
 import TextCentered from "../../components/TextCentered";
 import LogoTab from "../../components/Logo-Tab";
-import Logos from "../../components/Logos";
-import Providers from "../../components/Providers";
 import EndingSection from "../../components/EndingSection";
 
 function melanoma() {
