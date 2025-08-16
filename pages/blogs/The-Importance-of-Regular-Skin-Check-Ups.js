@@ -1,16 +1,16 @@
 import React from "react";
 import Head from "next/head";
-import Navbar from "../components/Navbar";
-import EndingSection from "../components/EndingSection";
-import TitleRow from "../components/TitleRow";
-import LogoTab from "../components/Logo-Tab";
+import Navbar from "../../components/Navbar";
+import EndingSection from "../../components/EndingSection";
+import TitleRow from "../../components/TitleRow";
+import LogoTab from "../../components/Logo-Tab";
 import { motion } from "framer-motion";
 
 export default function Blog2() {
   return (
     <>
       <Head>
-        <title>Blog - The Importance of Regular Skin Check-Ups</title>
+        <title>The Importance of Regular Skin Check-Ups</title>
         <meta
           name="description"
           content="Learn why regular skin check-ups are crucial for maintaining healthy skin and early detection of skin issues."
