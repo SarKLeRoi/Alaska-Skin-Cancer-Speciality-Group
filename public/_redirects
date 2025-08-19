@@ -1,4 +1,3 @@
-# Simple redirects to prevent loops
+# Only essential page redirects - no domain redirects to prevent loops
 
 /Alaska / 301
-/\*/ /:splat 301

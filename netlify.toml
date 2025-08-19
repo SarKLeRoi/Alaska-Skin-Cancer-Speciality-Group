@@ -5,34 +5,6 @@
 [build.environment]
   NODE_VERSION = "18"
 
-[[redirects]]
-  from = "https://alaskaskincancer.com/*"
-  to = "https://www.alaskaskincancer.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://alaskaskincancer.com/*"
-  to = "https://www.alaskaskincancer.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://www.alaskaskincancer.com/*"
-  to = "https://www.alaskaskincancer.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/Alaska"
-  to = "/"
-  status = 301
-
-[[redirects]]
-  from = "/*/"
-  to = "/:splat"
-  status = 301
-
 [functions]
 directory = "netlify/functions"
 
