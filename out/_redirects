@@ -4,8 +4,8 @@ https://alaskaskincancer.com/* https://www.alaskaskincancer.com/:splat 301!
 
 # Redirect http to https
 
-http://www.alaskaskincancer.com/_ https://www.alaskaskincancer.com/:splat 301!
 http://alaskaskincancer.com/_ https://www.alaskaskincancer.com/:splat 301!
+http://www.alaskaskincancer.com/_ https://www.alaskaskincancer.com/:splat 301!
 
 # Redirect old Alaska URL to homepage
 
@@ -14,7 +14,3 @@ http://alaskaskincancer.com/_ https://www.alaskaskincancer.com/:splat 301!
 # Handle trailing slashes
 
 /\*/ /:splat 301
-
-# Catch-all redirect to www version
-
-https://alaskaskincancer.com/* https://www.alaskaskincancer.com/:splat 301!
