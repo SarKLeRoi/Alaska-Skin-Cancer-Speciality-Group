@@ -1,6 +1,5 @@
 import React from "react";
 import Head from "next/head";
-import Script from "next/script";
 import { motion } from "framer-motion";
 import Navbar from "../../components/Navbar";
 import TitleRow from "../../components/TitleRow";
@@ -73,20 +72,6 @@ export default function PrivacyPolicy() {
         <link rel="icon" href="/images/favicon.png" />
         <link rel="canonical" href={`${baseUrl}/privacyPolicy`} />
       </Head>
-
-      {/* Google Analytics */}
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=G-NJLRMTQK48`}
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-NJLRMTQK48');
-        `}
-      </Script>
 
       <div>
         <TitleRow />
@@ -174,7 +159,50 @@ export default function PrivacyPolicy() {
               </motion.div>
 
               <motion.div className="legal-section" variants={fadeInUp}>
-                <h2>3. Google Analytics</h2>
+                <h2>3. Cookies and Tracking Technologies</h2>
+                <div className="legal-subsection">
+                  <p>
+                    Our website uses cookies and similar tracking technologies
+                    to enhance your browsing experience and analyze site usage.
+                  </p>
+                  <p>
+                    <strong>Types of Cookies We Use:</strong>
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Essential Cookies:</strong> These cookies are
+                      necessary for the website to function properly and cannot
+                      be disabled.
+                    </li>
+                    <li>
+                      <strong>Analytics Cookies:</strong> We use Google
+                      Analytics cookies to understand how visitors interact with
+                      our website, including page views, time spent on pages,
+                      and navigation patterns. This helps us improve our website
+                      and user experience.
+                    </li>
+                    <li>
+                      <strong>Preference Cookies:</strong> These cookies
+                      remember your choices and settings to provide a
+                      personalized experience.
+                    </li>
+                  </ul>
+                  <p>
+                    <strong>Cookie Consent:</strong> We will only place
+                    non-essential cookies on your device after you have provided
+                    your consent. You can manage your cookie preferences at any
+                    time through our cookie consent banner.
+                  </p>
+                  <p>
+                    <strong>Third-Party Cookies:</strong> Google Analytics may
+                    set additional cookies for analytics purposes. These are
+                    subject to Google&apos;s privacy policy.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div className="legal-section" variants={fadeInUp}>
+                <h2>4. Google Analytics</h2>
                 <div className="legal-subsection">
                   <p>
                     Our website uses Google Analytics to help us understand how
@@ -182,11 +210,16 @@ export default function PrivacyPolicy() {
                     anonymously and reports website trends without identifying
                     individual visitors.
                   </p>
+                  <p>
+                    <strong>Consent Required:</strong> Google Analytics cookies
+                    are only loaded after you provide consent through our cookie
+                    banner. You can withdraw this consent at any time.
+                  </p>
                 </div>
               </motion.div>
 
               <motion.div className="legal-section" variants={fadeInUp}>
-                <h2>4. Data Security</h2>
+                <h2>5. Data Security</h2>
                 <div className="legal-subsection">
                   <p>
                     We implement appropriate security measures to protect your
@@ -202,7 +235,7 @@ export default function PrivacyPolicy() {
               </motion.div>
 
               <motion.div className="legal-section" variants={fadeInUp}>
-                <h2>5. Your Rights</h2>
+                <h2>6. Your Rights</h2>
                 <div className="legal-subsection">
                   <p>
                     You may contact us to request access, correction, or
@@ -214,7 +247,7 @@ export default function PrivacyPolicy() {
               </motion.div>
 
               <motion.div className="legal-section" variants={fadeInUp}>
-                <h2>6. Policy Changes</h2>
+                <h2>7. Policy Changes</h2>
                 <div className="legal-subsection">
                   <p>
                     We reserve the right to update this privacy policy. Any
@@ -225,7 +258,7 @@ export default function PrivacyPolicy() {
               </motion.div>
 
               <motion.div className="legal-section" variants={fadeInUp}>
-                <h2>7. Contact Information</h2>
+                <h2>8. Contact Information</h2>
                 <div className="legal-subsection">
                   <p>
                     For privacy-related questions or concerns, please contact

@@ -168,6 +168,16 @@ export default function Footer() {
           </Link>
           <Link href="/legal/medicalDisclaimer">Medical Disclaimer</Link>
           <Link href="/legal/hipaaNotice">HIPAA Notice</Link>
+          <button
+            className="cookie-settings-link"
+            onClick={() => {
+              // Trigger cookie preferences modal
+              const event = new CustomEvent("openCookiePreferences");
+              window.dispatchEvent(event);
+            }}
+          >
+            Cookie Settings
+          </button>
         </div>
       </motion.div>
     </motion.footer>

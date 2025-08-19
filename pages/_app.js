@@ -1,10 +1,45 @@
 // pages/_app.js
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
+import CookieConsent from "../components/CookieConsent";
+import {
+  loadGoogleAnalytics,
+  removeGoogleAnalytics,
+  hasCookieConsent,
+  trackPageView,
+} from "../utils/analytics";
 import "../styles/global.css"; // You can import global styles here
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+  const [analyticsLoaded, setAnalyticsLoaded] = useState(false);
+
+  // Handle cookie consent changes
+  const handleConsentChange = (consent) => {
+    if (consent === "accepted") {
+      loadGoogleAnalytics();
+      setAnalyticsLoaded(true);
+    } else {
+      removeGoogleAnalytics();
+      setAnalyticsLoaded(false);
+    }
+  };
+
+  // Check initial consent status
+  useEffect(() => {
+    if (hasCookieConsent()) {
+      loadGoogleAnalytics();
+      setAnalyticsLoaded(true);
+    }
+  }, []);
+
+  // Track page views when consent is given
+  useEffect(() => {
+    if (analyticsLoaded) {
+      trackPageView(router.asPath);
+    }
+  }, [router.asPath, analyticsLoaded]);
 
   useEffect(() => {
     // Optimized scroll to top when route changes (less aggressive for framer-motion)
@@ -35,7 +70,12 @@ function MyApp({ Component, pageProps }) {
     }
   }, []);
 
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Component {...pageProps} />
+      <CookieConsent onConsentChange={handleConsentChange} />
+    </>
+  );
 }
 
 export default MyApp;
