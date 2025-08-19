@@ -75,20 +75,6 @@ export default function HipaaNotice() {
         <link rel="canonical" href={`${baseUrl}/hipaaNotice`} />
       </Head>
 
-      {/* Google Analytics */}
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=G-NJLRMTQK48`}
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-NJLRMTQK48');
-        `}
-      </Script>
-
       <div>
         <TitleRow />
         <Navbar />

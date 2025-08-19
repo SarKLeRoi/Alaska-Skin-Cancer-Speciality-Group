@@ -1,5 +1,11 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: /Alaska
+Disallow: /_next/
+Disallow: /api/
 
-Sitemap: https://alaskaskincancer.com/sitemap.xml
+# Allow all other pages
+Allow: /
+
+# Sitemap
+Sitemap: https://www.alaskaskincancer.com/sitemap.xml
